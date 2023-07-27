@@ -1,0 +1,160 @@
+.techstack{
+    padding: 0 3rem 0 3rem;
+    display: flex;
+    height: 90vh;
+    margin-top: 4rem;
+}
+
+.t-left{
+    display: flex;
+    flex-direction: column;
+}
+
+.t-left > :nth-child(1){
+    font-size: 3.5rem;
+    color: var(--black);
+    font-weight: bold;
+}
+
+.t-left > :nth-child(2){
+    font-size: 4.5rem;
+    color: var(--orange);
+    font-weight: bold;
+}
+
+.t-left > :nth-child(3){
+    color: var(--gray);
+    font-weight: 100;
+    font-size: 18px;
+    margin-top: 1rem;
+    text-align:justify;
+}
+
+.t-right{
+    position: relative;
+    left: 14rem;
+    top: auto;
+}
+
+.t-mainCircle{
+    position: relative;
+    left: 7rem;
+    width: 18rem;
+    height: 18rem;
+    border-radius: 100%;
+    box-shadow: var(--smboxShadow);
+    top: 2rem;
+    background-color: white;
+}
+
+.t-mainCircle > *{
+    position: absolute;
+}
+
+.t-mainCircle > :nth-child(1){
+    top: -3rem;
+    left: 6rem;
+}
+.t-mainCircle > :nth-child(2){
+    left: -3rem;
+    top: 5rem;
+}
+.t-mainCircle > :nth-child(3){
+    left: 6rem;
+    top: 5rem;
+}
+.t-mainCircle > :nth-child(4){
+    left: 15rem;
+    top: 5rem;
+}
+.t-mainCircle > :nth-child(5){
+    top: 13rem;
+    left: 6rem;
+}
+
+.t-secCircle{
+    width: 6rem;
+    height: 6rem;
+    position: absolute;
+    border-radius: 100%;
+    border: 5px solid #ebebeb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: "none";
+    box-shadow: var(--smboxShadow);
+    background: white;
+}
+
+.t-secCircle > img{
+    transform: scale(0.040);
+}
+
+#t-secCircle2 > img{
+    transform: scale(0.025);
+}
+
+#t-secCircle3 > img{
+    transform: scale(0.060);
+}
+
+#t-secCircle1 > img{
+    transform: scale(0.030);
+}
+
+.t-backCircle{
+    position: absolute;
+    height: 13rem;  
+    width: 13rem;
+    border-radius: 100%;
+    z-index: -1;
+}
+
+.blueCircle{
+    background-color: var(--yellow);
+    left: 15rem;
+    top: 1rem;
+}
+
+.yellowCircle{
+    background-color: #916aac;
+    left: 15rem;
+    top: 8rem;
+}
+
+.z-button{
+    width: 8rem;
+    height: 2rem;
+    margin-top: 2.5rem;
+}
+@media screen and (max-width: 480px) {
+    .techstack {
+      flex-direction: column;
+      height: 55rem;
+      padding: 35px;
+      gap: 5rem;
+    }
+  
+    .t-right {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      transform: scale(0.8);
+      left: 0.7rem;
+    }
+    .t-mainCircle{
+      position: static;
+    }
+    .t-backCircle{
+      left: 8rem !important;
+    }
+    .blueCircle{
+        left: 15rem;
+        top: -0.5rem;
+    }
+    
+    .yellowCircle{
+        left: 15rem;
+        top:6rem;
+    }
+  }
