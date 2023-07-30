@@ -33,6 +33,12 @@ span > :nth-child(1){
     color: var(--gray);
     text-align:justify;
 }
+
+@media screen and (max-width: 480px) {
+  .timeline {
+    padding: 0 1rem 0 1rem;
+  }
+}
   
 
 
