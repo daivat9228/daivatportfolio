@@ -26,6 +26,6 @@
     .f-content{
       transform: scale(.6);
       gap: 20px;
-      bottom: 4.5rem;
+      bottom: -0.5rem;
     }
   }
