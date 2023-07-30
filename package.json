@@ -1,7 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
-  "homepage": "https://github.com/daivat9228/daivatportfolio",
+  "homepage": "https://daivat9228.github.io/daivatportfolio",
   "private": true,
   "dependencies": {
     "@iconscout/react-unicons": "^2.0.2",
