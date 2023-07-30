@@ -1,41 +1,41 @@
-.timeline{
-    padding: 0 3rem 0 3rem;
+.timeline {
+  padding: 0 2rem 0 2rem;
 }
-.tl-left{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content:center ;
-    padding: 3rem ;
+.tl-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
 }
-.tl-left > :nth-child(1){
-    color: var(--black);
-    font-size: 3.5rem;
-    font-weight: bold;
+.tl-left > :nth-child(1) {
+  color: var(--black);
+  font-size: 3.5rem;
+  font-weight: bold;
 }
 
-span > :nth-child(1){
-    color: var(--purplelight);
-    font-size: 4.5rem;
-    font-weight: bold;
+span > :nth-child(1) {
+  color: var(--purplelight);
+  font-size: 4.5rem;
+  font-weight: bold;
 }
- 
+
 .vertical-timeline-element-content {
-    box-sizing: border-box;
-    box-shadow: var(--boxShadow);
-    padding: 2rem 2rem !important;
-    border-radius: 15px !important;
+  box-sizing: border-box;
+  box-shadow: var(--boxShadow);
+  padding: 2rem 2rem !important;
+  border-radius: 15px !important;
 }
-  
+
 #description {
-    font-size: 15px;
-    font-weight: 100;
-    color: var(--gray);
-    text-align:justify;
+  font-size: 15px;
+  font-weight: 100;
+  color: var(--gray);
+  text-align: justify;
 }
-  
 
-
-
-
-  
+@media screen and (max-width: 480px) {
+  .timeline {
+    padding: 0 1rem 0 1rem;
+  }
+}
