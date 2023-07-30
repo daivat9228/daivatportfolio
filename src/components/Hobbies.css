@@ -47,9 +47,11 @@
     .hobbies {
       margin-top: 0;
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
       gap: 5rem;
       height: 85rem;
-      padding: 0 1rem 0 1rem;
+      padding: 0;
     }
     .card {
         width: 10rem;
