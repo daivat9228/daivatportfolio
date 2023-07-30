@@ -1,5 +1,5 @@
 .techstack{
-    padding: 0 3rem 0 3rem;
+    padding: 0 2rem 0 2rem;
     display: flex;
     height: 70vh;
     margin-top: 5rem;
@@ -132,7 +132,7 @@
     .techstack {
       flex-direction: column;
       height: 55rem;
-      padding: 35px;
+      padding: 25px;
       gap: 5rem;
     }
   
