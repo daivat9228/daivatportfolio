@@ -36,7 +36,9 @@ span > :nth-child(1){
 
 @media screen and (max-width: 480px) {
   .timeline {
-    padding: 0 1rem 0 1rem;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
   }
 }
   
