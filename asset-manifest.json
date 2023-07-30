@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/daivat9228/daivatportfolio.git/static/css/main.a3cbdcc7.css",
-    "main.js": "/daivat9228/daivatportfolio.git/static/js/main.87e677f2.js",
-    "static/media/bootstrap-framework-logo.png": "/daivat9228/daivatportfolio.git/static/media/bootstrap-framework-logo.ef9e2efdaee2bcbe10e9.png",
-    "static/media/css3.png": "/daivat9228/daivatportfolio.git/static/media/css3.5d1e9b1f4ab7f72ce7bc.png",
-    "static/media/html.png": "/daivat9228/daivatportfolio.git/static/media/html.edb334b841dbb79cce57.png",
-    "static/media/react-native-logo.png": "/daivat9228/daivatportfolio.git/static/media/react-native-logo.25051af63aa43aba1cf6.png",
-    "static/media/javascript-logo.png": "/daivat9228/daivatportfolio.git/static/media/javascript-logo.0441209bbd91f7bf1e11.png",
-    "static/media/wave.svg": "/daivat9228/daivatportfolio.git/static/media/wave.5a0a0f9fcf7304abbec377ab545ce2a0.svg",
-    "static/media/school.svg": "/daivat9228/daivatportfolio.git/static/media/school.f919580e0fc8b339396369d8c196870c.svg",
-    "index.html": "/daivat9228/daivatportfolio.git/index.html",
-    "static/media/work.svg": "/daivat9228/daivatportfolio.git/static/media/work.f4b6d08987ae2b497cea53de7dadf525.svg",
-    "main.a3cbdcc7.css.map": "/daivat9228/daivatportfolio.git/static/css/main.a3cbdcc7.css.map",
-    "main.87e677f2.js.map": "/daivat9228/daivatportfolio.git/static/js/main.87e677f2.js.map"
+    "main.css": "/daivat9228/daivatportfolio/static/css/main.a3cbdcc7.css",
+    "main.js": "/daivat9228/daivatportfolio/static/js/main.881b2ce6.js",
+    "static/media/bootstrap-framework-logo.png": "/daivat9228/daivatportfolio/static/media/bootstrap-framework-logo.ef9e2efdaee2bcbe10e9.png",
+    "static/media/css3.png": "/daivat9228/daivatportfolio/static/media/css3.5d1e9b1f4ab7f72ce7bc.png",
+    "static/media/html.png": "/daivat9228/daivatportfolio/static/media/html.edb334b841dbb79cce57.png",
+    "static/media/react-native-logo.png": "/daivat9228/daivatportfolio/static/media/react-native-logo.25051af63aa43aba1cf6.png",
+    "static/media/javascript-logo.png": "/daivat9228/daivatportfolio/static/media/javascript-logo.0441209bbd91f7bf1e11.png",
+    "static/media/wave.svg": "/daivat9228/daivatportfolio/static/media/wave.5a0a0f9fcf7304abbec377ab545ce2a0.svg",
+    "static/media/school.svg": "/daivat9228/daivatportfolio/static/media/school.f919580e0fc8b339396369d8c196870c.svg",
+    "index.html": "/daivat9228/daivatportfolio/index.html",
+    "static/media/work.svg": "/daivat9228/daivatportfolio/static/media/work.f4b6d08987ae2b497cea53de7dadf525.svg",
+    "main.a3cbdcc7.css.map": "/daivat9228/daivatportfolio/static/css/main.a3cbdcc7.css.map",
+    "main.881b2ce6.js.map": "/daivat9228/daivatportfolio/static/js/main.881b2ce6.js.map"
   },
   "entrypoints": [
     "static/css/main.a3cbdcc7.css",
-    "static/js/main.87e677f2.js"
+    "static/js/main.881b2ce6.js"
   ]
 }
