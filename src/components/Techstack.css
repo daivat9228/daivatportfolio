@@ -1,8 +1,8 @@
 .techstack{
     padding: 0 3rem 0 3rem;
     display: flex;
-    height: 90vh;
-    margin-top: 4rem;
+    height: 70vh;
+    margin-top: 5rem;
 }
 
 .t-left{
@@ -18,11 +18,12 @@
 
 .t-left > :nth-child(2){
     font-size: 4.5rem;
-    color: var(--orange);
+    color: var(--purplelight);
     font-weight: bold;
 }
 
 .t-left > :nth-child(3){
+    width: 30rem;
     color: var(--gray);
     font-weight: 100;
     font-size: 18px;
@@ -111,7 +112,7 @@
 }
 
 .blueCircle{
-    background-color: var(--yellow);
+    background-color: var(--purple);
     left: 15rem;
     top: 1rem;
 }
@@ -156,5 +157,8 @@
     .yellowCircle{
         left: 15rem;
         top:6rem;
+    }
+    .t-left > :nth-child(3){
+        width: 300px;
     }
   }

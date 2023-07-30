@@ -15,7 +15,7 @@ const Techstack = () => {
         <div className="t-left">
             <span>Tech</span>
             <span>Stack</span>
-            <span >As an aspiring intern, I have a basic understanding of<br/> HTML, CSS, JavaScript, and React JS. I am familiar<br/> with HTML tags, CSS styling, and JavaScript functions.<br/>  In addition, I have a good grasp of React JS components<br/> and their implementation. With my foundational skills<br/> in web development, I am excited to learn and grow as<br/> an intern in a supportive and collaborative environment.</span>
+            <div >As an aspiring intern, I have a basic understanding of HTML, CSS, JavaScript, and React JS. I am familiar with HTML tags, CSS styling, and JavaScript functions.  In addition, I have a good grasp of React JS components and their implementation. With my foundational skills in web development, I am excited to learn and grow as an intern in a supportive and collaborative environment.</div>
         </div>
         <div className="t-right">
             <motion.div

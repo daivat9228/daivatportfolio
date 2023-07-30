@@ -1,0 +1,41 @@
+.timeline{
+    padding: 0 3rem 0 3rem;
+}
+.tl-left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:center ;
+    padding: 3rem ;
+}
+.tl-left > :nth-child(1){
+    color: var(--black);
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+span > :nth-child(1){
+    color: var(--purplelight);
+    font-size: 4.5rem;
+    font-weight: bold;
+}
+ 
+.vertical-timeline-element-content {
+    box-sizing: border-box;
+    box-shadow: var(--boxShadow);
+    padding: 2rem 2rem !important;
+    border-radius: 15px !important;
+}
+  
+#description {
+    font-size: 15px;
+    font-weight: 100;
+    color: var(--gray);
+    text-align:justify;
+}
+  
+
+
+
+
+  
