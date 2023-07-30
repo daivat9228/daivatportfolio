@@ -19,6 +19,7 @@ function App() {
        <Hobbies/>
        <Timeline/>
        <Contact/>
+       <Timeline/>
        <Footer/>
     </div>
     </>
