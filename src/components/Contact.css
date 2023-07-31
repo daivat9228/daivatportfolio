@@ -50,9 +50,10 @@ textarea{
     .contact-form{
         padding: 0;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        justify-content: center !important;
+        align-items: center !important;
         gap: 5rem;
+        height: 140vh;
     }
     .c-right .user{
         width: 16rem;
