@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/daivatportfolio/static/css/main.5541d056.css",
-    "main.js": "/daivatportfolio/static/js/main.d135fc76.js",
+    "main.css": "/daivatportfolio/static/css/main.95bafd71.css",
+    "main.js": "/daivatportfolio/static/js/main.4c02c4dc.js",
     "static/media/bootstrap-framework-logo.png": "/daivatportfolio/static/media/bootstrap-framework-logo.ef9e2efdaee2bcbe10e9.png",
     "static/media/css3.png": "/daivatportfolio/static/media/css3.5d1e9b1f4ab7f72ce7bc.png",
     "static/media/html.png": "/daivatportfolio/static/media/html.edb334b841dbb79cce57.png",
@@ -11,11 +11,11 @@
     "static/media/school.svg": "/daivatportfolio/static/media/school.f919580e0fc8b339396369d8c196870c.svg",
     "static/media/work.svg": "/daivatportfolio/static/media/work.f4b6d08987ae2b497cea53de7dadf525.svg",
     "index.html": "/daivatportfolio/index.html",
-    "main.5541d056.css.map": "/daivatportfolio/static/css/main.5541d056.css.map",
-    "main.d135fc76.js.map": "/daivatportfolio/static/js/main.d135fc76.js.map"
+    "main.95bafd71.css.map": "/daivatportfolio/static/css/main.95bafd71.css.map",
+    "main.4c02c4dc.js.map": "/daivatportfolio/static/js/main.4c02c4dc.js.map"
   },
   "entrypoints": [
-    "static/css/main.5541d056.css",
-    "static/js/main.d135fc76.js"
+    "static/css/main.95bafd71.css",
+    "static/js/main.4c02c4dc.js"
   ]
 }
