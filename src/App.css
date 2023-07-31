@@ -11,9 +11,10 @@
 }
 
 .App{
-  padding: 0.5rem 3.rem;
+  padding: 0.5rem 0.3rem;
   overflow: hidden;
   color: var(--black);
+  margin: 0;
 }
 .button{
   border-radius: 34px;
