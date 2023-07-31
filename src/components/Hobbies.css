@@ -50,9 +50,10 @@
       justify-content: center;
       align-items: center;
       gap: 5rem;
-      height: 85rem;
-      padding: 0;
+      height: 90rem;
+      padding-top: 0;
     }
+
     .card {
         width: 10rem;
     }
