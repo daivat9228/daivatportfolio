@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 .timeline {
   padding: 0 2rem 0 2rem;
+=======
+.timeline{
+    padding: 0 2rem 0 2rem;
+>>>>>>> af2e2ef724f4b345f782278f2bd194c64a5cbceb
 }
 .tl-left {
   display: flex;
@@ -33,6 +38,7 @@ span > :nth-child(1) {
   color: var(--gray);
   text-align: justify;
 }
+<<<<<<< HEAD
 
 @media screen and (max-width: 480px) {
   .timeline {
@@ -41,3 +47,19 @@ span > :nth-child(1) {
     align-items: center;
   }
 }
+=======
+
+@media screen and (max-width: 480px) {
+  .timeline {
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+  }
+}
+  
+
+
+
+
+  
+>>>>>>> af2e2ef724f4b345f782278f2bd194c64a5cbceb
