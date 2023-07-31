@@ -132,10 +132,7 @@
     .techstack {
       flex-direction: column;
       height: 55rem;
-<<<<<<< HEAD
-=======
       padding: 0;
->>>>>>> af2e2ef724f4b345f782278f2bd194c64a5cbceb
       justify-content: center;
       align-items: center;
       gap: 5rem;
