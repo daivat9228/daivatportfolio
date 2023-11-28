@@ -15,10 +15,10 @@ function Footer() {
             <div className="f-content">
                 <span>daivat796@gmail.com</span>
                 <div className="f-icons">
-                    <Insta color='white' size='3rem' />
-                    <Facebook color='white' size='3rem'/>
-                    <Linkedin color='white' size='3rem'/>
-                    <Github color='white' size='3rem'/>
+                    <Insta color='white' size='3rem' href='https://instagram.com/daivat__dhimmar?utm_source=qr&igshid=MThlNWY1MzQwNA==' />
+                    <Facebook color='white' size='3rem' href='https://instagram.com/daivat__dhimmar?utm_source=qr&igshid=MThlNWY1MzQwNA=='/>
+                    <Linkedin color='white' size='3rem' href='https://www.linkedin.com/in/daivat-dhimmar-3903a1172?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app'/>
+                    <Github color='white' size='3rem' href='https://github.com/daivat9228'/>
                 </div>
             </div>
     </div>
