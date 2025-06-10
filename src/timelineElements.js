@@ -26,23 +26,22 @@ let timelineElements = [
       date: "May 2019",
       icon: "study",
     },
-    
     {
       id: 4,
       title: "Worked as a Civil Engineer",
       location: " ",
       description:
         "I have worked as a Civil Engineer at different firms for 3.5 years",
-      date: "2019 - 2023",
+      date: "2019 - 2024",
       icon: "work",
     },
     {
-      id: 5,
+      id: ,
       title: "Front-End Developer",
       location: "",
       description:
         "I have decided to switch my career from civil to the IT field because of the immense growth and potential I see in the IT industry. The world is becoming increasingly reliant on technology, and I want to be a part of shaping its future. I have chosen front-end development because of my strong visual aptitude. I believe my skills in sketching and video editing will be transferable to designing visually appealing user interfaces..",
-      date: "2023 ...",
+      date: "2025 ...",
       icon: "work",
     },
   ];
