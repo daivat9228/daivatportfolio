@@ -29,14 +29,14 @@ let timelineElements = [
     {
       id: 4,
       title: "Worked as a Civil Engineer",
-      location: " ",
+      location: "Valsad ",
       description:
         "I have worked as a Civil Engineer at different firms for 3.5 years",
       date: "2019 - 2024",
       icon: "work",
     },
     {
-      id: ,
+      id: 5,
       title: "Front-End Developer",
       location: "",
       description:
