@@ -31,7 +31,7 @@ let timelineElements = [
       title: "Worked as a Civil Engineer",
       location: "Valsad ",
       description:
-        "I have worked as a Civil Engineer at different firms for 3.5 years",
+        "I have worked as a Civil Engineer at different firms for 4.5 years",
       date: "2019 - 2024",
       icon: "work",
     },
