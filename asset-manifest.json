@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/daivatportfolio/static/css/main.ab1c808c.css",
-    "main.js": "/daivatportfolio/static/js/main.4c02c4dc.js",
+    "main.js": "/daivatportfolio/static/js/main.4e2950a3.js",
     "static/media/bootstrap-framework-logo.png": "/daivatportfolio/static/media/bootstrap-framework-logo.ef9e2efdaee2bcbe10e9.png",
     "static/media/css3.png": "/daivatportfolio/static/media/css3.5d1e9b1f4ab7f72ce7bc.png",
     "static/media/html.png": "/daivatportfolio/static/media/html.edb334b841dbb79cce57.png",
@@ -12,10 +12,10 @@
     "static/media/work.svg": "/daivatportfolio/static/media/work.f4b6d08987ae2b497cea53de7dadf525.svg",
     "index.html": "/daivatportfolio/index.html",
     "main.ab1c808c.css.map": "/daivatportfolio/static/css/main.ab1c808c.css.map",
-    "main.4c02c4dc.js.map": "/daivatportfolio/static/js/main.4c02c4dc.js.map"
+    "main.4e2950a3.js.map": "/daivatportfolio/static/js/main.4e2950a3.js.map"
   },
   "entrypoints": [
     "static/css/main.ab1c808c.css",
-    "static/js/main.4c02c4dc.js"
+    "static/js/main.4e2950a3.js"
   ]
 }
