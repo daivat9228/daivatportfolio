@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/daivatportfolio/static/css/main.5dcbfeb6.css",
-    "main.js": "/daivatportfolio/static/js/main.a611e5fb.js",
-    "static/media/bootstrap-framework-logo.png": "/daivatportfolio/static/media/bootstrap-framework-logo.ef9e2efdaee2bcbe10e9.png",
+    "main.js": "/daivatportfolio/static/js/main.1efc2718.js",
     "static/media/css3.png": "/daivatportfolio/static/media/css3.5d1e9b1f4ab7f72ce7bc.png",
     "static/media/html.png": "/daivatportfolio/static/media/html.edb334b841dbb79cce57.png",
     "static/media/react-native-logo.png": "/daivatportfolio/static/media/react-native-logo.25051af63aa43aba1cf6.png",
     "static/media/javascript-logo.png": "/daivatportfolio/static/media/javascript-logo.0441209bbd91f7bf1e11.png",
+    "static/media/TailwindCSS.png": "/daivatportfolio/static/media/TailwindCSS.fdec46372df17366cc1c.png",
     "static/media/wave.svg": "/daivatportfolio/static/media/wave.5a0a0f9fcf7304abbec377ab545ce2a0.svg",
     "static/media/school.svg": "/daivatportfolio/static/media/school.f919580e0fc8b339396369d8c196870c.svg",
     "static/media/work.svg": "/daivatportfolio/static/media/work.f4b6d08987ae2b497cea53de7dadf525.svg",
     "index.html": "/daivatportfolio/index.html",
     "main.5dcbfeb6.css.map": "/daivatportfolio/static/css/main.5dcbfeb6.css.map",
-    "main.a611e5fb.js.map": "/daivatportfolio/static/js/main.a611e5fb.js.map"
+    "main.1efc2718.js.map": "/daivatportfolio/static/js/main.1efc2718.js.map"
   },
   "entrypoints": [
     "static/css/main.5dcbfeb6.css",
-    "static/js/main.a611e5fb.js"
+    "static/js/main.1efc2718.js"
   ]
 }
