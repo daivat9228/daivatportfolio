@@ -142,10 +142,21 @@
     align-items: center;
     justify-content: center;
     transform: scale(0.8);
-    left: 5rem;
+    left: 4rem;
   }
-  .t-mainCircle {
+
+ 
+
+  .t-left > :nth-child(3) {
+    width: 100%;
+    max-width: 95%;
+    margin: 1rem auto !important;
+    text-align: justify;
+  }
+  
+  /* .t-mainCircle {
     position: static;
+    left: 10rem
   }
   .t-backCircle {
     left: 8rem !important;
@@ -161,7 +172,7 @@
   }
   .t-left > :nth-child(3) {
     width: 300px;
-  }
+  } */
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1224px) {

@@ -74,7 +74,7 @@
   }
 
   .i-name > :nth-child(2) {
-    font-size: 2.6rem;
+    font-size: 2rem;
   }
 
   .i-name > :nth-child(3) {
@@ -89,7 +89,7 @@
 }
 
 
-@media screen and (max-width: 768px) and (min-width: 481px) {
+@media screen and (max-width: 768px) and (min-width: 480px) {
   .intro {
     flex-direction: column;
     height: auto;

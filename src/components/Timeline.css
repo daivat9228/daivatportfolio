@@ -1,4 +1,4 @@
-  .timeline {
+.timeline {
   padding: 0 2rem 0 2rem;
 }
 .tl-left {
@@ -38,17 +38,15 @@ span > :nth-child(1) {
 }
 
 @media screen and (max-width: 480px) {
-  .timeline {
-    padding: 0;
-    justify-content: center;
+  .tl-left > :nth-child(1),
+  .tl-left > :nth-child(2) {
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    scale: 0.85;
   }
-}
-
-@media screen and (max-width: 480px) {
   .timeline {
-    padding-top: 7rem;
-    padding-bottom: 7rem;
+    padding: 7rem 0.5rem 7rem 0.5rem;
     justify-content: center;
     align-items: center;
   }

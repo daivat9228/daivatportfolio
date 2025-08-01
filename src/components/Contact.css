@@ -113,9 +113,10 @@ textarea {
     justify-content: center !important;
     align-items: center !important;
     gap: 3rem;
-    height: 125vh;
+    height: 60vh;
   }
   .c-right .user {
     width: 16rem;
   }
+
 }

@@ -109,7 +109,7 @@
     font-size: 15px;
     width: 100%;
     max-width: 90%;
-    margin: 0 auto;
+    margin: 1rem auto;
     text-align: justify;
   }
 }
@@ -141,6 +141,6 @@
     gap: 3rem;
   }
   .h-left > :nth-child(3) {
-    width: 90%;
+    width: 100% !important;
   }
 }
