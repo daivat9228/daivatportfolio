@@ -8,8 +8,10 @@ import "./Timeline.css";
 
 
 function Timeline() {
+
     let workIconStyle = {background: "var(--purplelight)"};
     let studyIconStyle = { background:"var(--purpleultralight)"}
+    
   return (
     <div className='timeline' id='Timeline'>
         <div className="tl-left">

@@ -1,29 +1,86 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './Navbar.css';
-import {Link} from "react-scroll";
-import Toggle from "./toggle/Toggle"
+import { Link } from "react-scroll";
+import Toggle from "./toggle/Toggle";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react"; 
 
 function Navbar() {
+  const leftRef = useRef(null);
+  const menuItemsRef = useRef([]);
+  const buttonRef = useRef(null);
+
+
+  useGSAP(() => {
+    gsap.from(leftRef.current, {
+      x: -100,
+      opacity: 0,
+      duration: 1,
+      ease: "power2.out",
+      delay: 0.5
+    });
+
+    gsap.from(menuItemsRef.current, {
+      opacity: 0,
+      y: -20,
+      duration: 0.8,
+      ease: "power2.out",
+      stagger: 0.15,
+      delay: 0.5,
+    });
+
+    gsap.from(buttonRef.current, {
+      x: 100,
+      opacity: 0,
+      duration: 1,
+      ease: "power2.out",
+      delay: 2
+    });
+
+    menuItemsRef.current.forEach((item) => {
+    item.addEventListener("mouseenter", () => {
+      gsap.to(item, {
+        scale: 1.2,
+        fontWeight: "semibold",
+        duration: 1,
+        ease: "power3.out"
+      });
+    });
+
+    item.addEventListener("mouseleave", () => {
+      gsap.to(item, {
+        scale: 1,
+        fontWeight: "normal",
+        duration: 1,
+        ease: "power3.out"
+      });
+    });
+  });
+  }, []); 
+
+
   return (
-    <div className="n-wrapper"> 
-        <div className="n-left">
-                <div className="n-name">Daivat D.</div>
-                <Toggle/>
-            </div>
-            <div className="n-right">
-                <div className="n-list">
-                    <ul>
-                        <li><Link activeClass='active' to='Home' spy={true} smooth={true}>Home</Link></li>
-                        <li><Link to='Techstack' spy={true} smooth={true}>Techstack</Link></li>
-                        <li><Link to='Hobbies' spy={true} smooth={true}>Hobbies</Link></li>
-                        <li><Link to='Timeline' spy={true} smooth={true}>Timeline</Link></li>
-                        <li><Link to='Contact' spy={true} smooth={true}>Contact</Link></li>
-                    </ul>
-                </div>
-                <button className="button n-button">Contact</button>
-            </div>
+    <div className="n-wrapper">
+      <div className="n-left" ref={leftRef}>
+        <div className="n-name">Daivat D.</div>
+        <Toggle />
+      </div>
+      <div className="n-right">
+        <div className="n-list">
+          <ul>
+            {["Home", "Techstack", "Hobbies", "Timeline", "Contact"].map((item, index) => (
+              <li key={index} ref={el => (menuItemsRef.current[index] = el)}>
+                <Link activeClass="active" to={item} spy={true} smooth={true}>
+                  {item}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <button className="button n-button" ref={buttonRef}>Contact</button>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;

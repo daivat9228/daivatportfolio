@@ -5,7 +5,7 @@ let timelineElements = [
       location: "Sett R.J.J. High School, Valsad, Gujarat",
       description:
         "I have completed my 10th std education from Sett R.J.J. High School located at Valsad, Gujarat.",
-      date: "March 2013",
+      date: "March, 2013",
       icon: "study",
     },
     {
@@ -14,7 +14,7 @@ let timelineElements = [
       location: "Jay Ambe Vidhyabhavan, Valsad, Gujarat",
       description:
         "I have completed my 12th std education from Jay Ambe Vidhyabhavan located at Valsad, Gujarat.",
-      date: "March 2015",
+      date: "March, 2015",
       icon: "study",
     },
     {
@@ -23,7 +23,7 @@ let timelineElements = [
       location: "Government Engineering College, Valsad, Gujarat",
       description:
         "I have completed BE in Civil Engineering from Government Engineering College located at Valsad, Gujarat.",
-      date: "May 2019",
+      date: "May, 2019",
       icon: "study",
     },
     {

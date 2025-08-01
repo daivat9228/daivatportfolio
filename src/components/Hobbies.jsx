@@ -1,23 +1,58 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Card from "./cards/Card.jsx";
 import "./Hobbies.css";
 import Sketching from "../img/sketch1.png";
 import Movies from "../img/movie1.png";
 import Travelling from "../img/travelling1.png";
 import { motion } from "framer-motion";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Hobbies = () => {
   const transition = {
     duration: 1,
     type: "spring",
   };
+
+  const hLeftRef = useRef(null);
+
+  useEffect(() => {
+    gsap.fromTo(
+      hLeftRef.current,
+      { opacity: 0, x: -100 },
+      {
+        opacity: 1,
+        x: 0,
+        duration: 1.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: hLeftRef.current,
+          start: "top 80%",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+  }, []);
+
   return (
     <div className="hobbies" id="Hobbies">
       {/* {left side} */}
-      <div className="h-left">
+      <div className="h-left" ref={hLeftRef}>
         <span>My</span>
         <span>Hobbies</span>
-        <div>My hobbies encompass a delightful range of interests  that keep me engaged and inspired. I find solace in the  captivating world of movies, where each story unfolds  before my eyes, leaving me enthralled. Sketching, on the other hand, is my creative outlet, allowing me to express emotions and ideas through strokes of a pencil. The allure of exploration beckons me to embark on enriching journeys, as traveling exposes me to diverse cultures and landscapes, igniting my sense of wonder and curiosity. These hobbies collectively enrich my life and add vivid colors to my daily experiences.</div>
+        <div>
+          My hobbies encompass a delightful range of interests that keep me
+          engaged and inspired. I find solace in the captivating world of
+          movies, where each story unfolds before my eyes, leaving me
+          enthralled. Sketching, on the other hand, is my creative outlet,
+          allowing me to express emotions and ideas through strokes of a pencil.
+          The allure of exploration beckons me to embark on enriching journeys,
+          as traveling exposes me to diverse cultures and landscapes, igniting
+          my sense of wonder and curiosity. These hobbies collectively enrich my
+          life and add vivid colors to my daily experiences.
+        </div>
       </div>
 
       {/* {right side} */}
@@ -28,10 +63,7 @@ const Hobbies = () => {
           whileInView={{ left: "14rem" }}
           transition={transition}
         >
-          <Card
-            emoji={Sketching}
-            heading={"Sketching"}
-          />
+          <Card emoji={Sketching} heading={"Sketching"} />
         </motion.div>
 
         {/* second card */}
@@ -40,10 +72,7 @@ const Hobbies = () => {
           whileInView={{ left: "-4rem" }}
           transition={transition}
         >
-          <Card 
-          emoji={Movies} 
-          heading={"Movies"} 
-           />
+          <Card emoji={Movies} heading={"Movies"} />
         </motion.div>
 
         {/* third card */}
@@ -52,10 +81,7 @@ const Hobbies = () => {
           whileInView={{ left: "12rem" }}
           transition={transition}
         >
-          <Card 
-          emoji={Travelling} 
-          heading={"Travelling"} 
-          />
+          <Card emoji={Travelling} heading={"Travelling"} />
         </motion.div>
       </div>
     </div>

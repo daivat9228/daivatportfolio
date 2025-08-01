@@ -1,4 +1,4 @@
-.timeline {
+  .timeline {
   padding: 0 2rem 0 2rem;
 }
 .tl-left {
@@ -7,6 +7,9 @@
   align-items: center;
   justify-content: center;
   padding: 3rem;
+  transform-style: preserve-3d;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+  backface-visibility: hidden;
 }
 .tl-left > :nth-child(1) {
   color: var(--black);
@@ -28,15 +31,15 @@ span > :nth-child(1) {
 }
 
 #description {
-  font-size: 15px;
-  font-weight: 100;
+  font-size: 13px;
+  font-weight: 400;
   color: var(--gray);
   text-align: justify;
 }
 
 @media screen and (max-width: 480px) {
   .timeline {
-    padding: 0 ;
+    padding: 0;
     justify-content: center;
     align-items: center;
   }

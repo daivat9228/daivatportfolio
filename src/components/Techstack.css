@@ -1,166 +1,246 @@
-.techstack{
-    padding: 0 2rem 0 2rem;
-    display: flex;
-    height: 70vh;
-    margin-top: 5rem;
+.techstack {
+  padding: 0 2rem 0 2rem;
+  display: flex;
+  height: 80vh;
+  margin-top: 5rem;
 }
 
-.t-left{
-    display: flex;
+.t-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  transform-style: preserve-3d;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+  backface-visibility: hidden;
+  scale: 1;
+}
+
+.t-left > :nth-child(1) {
+  font-size: 3.5rem;
+  color: var(--black);
+  font-weight: bold;
+}
+
+.t-left > :nth-child(2) {
+  font-size: 4.5rem;
+  color: var(--purplelight);
+  font-weight: bold;
+}
+
+.t-left > :nth-child(3) {
+  width: 30rem;
+  color: var(--gray);
+  font-weight: 400;
+  font-size: 17px;
+  margin-top: 1rem;
+  text-align: justify;
+}
+
+.t-right {
+  position: relative;
+  left: -15rem;
+  top: auto;
+}
+
+.t-mainCircle {
+  position: relative;
+  left: 7rem;
+  width: 18rem;
+  height: 18rem;
+  border-radius: 100%;
+  box-shadow: var(--smboxShadow);
+  top: 2rem;
+  background-color: white;
+}
+
+.t-mainCircle > * {
+  position: absolute;
+}
+
+.t-mainCircle > :nth-child(1) {
+  top: -3rem;
+  left: 6rem;
+}
+.t-mainCircle > :nth-child(2) {
+  left: -3rem;
+  top: 5rem;
+}
+.t-mainCircle > :nth-child(3) {
+  left: 6rem;
+  top: 5rem;
+}
+.t-mainCircle > :nth-child(4) {
+  left: 15rem;
+  top: 5rem;
+}
+.t-mainCircle > :nth-child(5) {
+  top: 13rem;
+  left: 6rem;
+}
+
+.t-secCircle {
+  width: 6rem;
+  height: 6rem;
+  position: absolute;
+  border-radius: 100%;
+  border: 5px solid #ebebeb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--smboxShadow);
+  background: white;
+}
+
+.t-secCircle > img {
+  transform: scale(0.04);
+}
+
+#t-secCircle2 > img {
+  transform: scale(0.025);
+}
+
+#t-secCircle3 > img {
+  transform: scale(0.06);
+}
+
+#t-secCircle1 > img {
+  transform: scale(0.03);
+}
+
+.t-backCircle {
+  position: absolute;
+  height: 13rem;
+  width: 13rem;
+  border-radius: 100%;
+  z-index: -1;
+}
+
+.blueCircle {
+  background-color: var(--purple);
+  left: 15rem;
+  top: 1rem;
+}
+
+.yellowCircle {
+  background-color: #916aac;
+  left: 15rem;
+  top: 8rem;
+}
+
+@media screen and (max-width: 480px) {
+  .techstack {
     flex-direction: column;
-}
+    height: 55rem;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+  }
 
-.t-left > :nth-child(1){
-    font-size: 3.5rem;
-    color: var(--black);
-    font-weight: bold;
-}
-
-.t-left > :nth-child(2){
-    font-size: 4.5rem;
-    color: var(--purplelight);
-    font-weight: bold;
-}
-
-.t-left > :nth-child(3){
-    width: 30rem;
-    color: var(--gray);
-    font-weight: 100;
-    font-size: 18px;
-    margin-top: 1rem;
-    text-align:justify;
-}
-
-.t-right{
-    position: relative;
-    left: 14rem;
-    top: auto;
-}
-
-.t-mainCircle{
-    position: relative;
-    left: 7rem;
-    width: 18rem;
-    height: 18rem;
-    border-radius: 100%;
-    box-shadow: var(--smboxShadow);
-    top: 2rem;
-    background-color: white;
-}
-
-.t-mainCircle > *{
-    position: absolute;
-}
-
-.t-mainCircle > :nth-child(1){
-    top: -3rem;
-    left: 6rem;
-}
-.t-mainCircle > :nth-child(2){
-    left: -3rem;
-    top: 5rem;
-}
-.t-mainCircle > :nth-child(3){
-    left: 6rem;
-    top: 5rem;
-}
-.t-mainCircle > :nth-child(4){
-    left: 15rem;
-    top: 5rem;
-}
-.t-mainCircle > :nth-child(5){
-    top: 13rem;
-    left: 6rem;
-}
-
-.t-secCircle{
-    width: 6rem;
-    height: 6rem;
-    position: absolute;
-    border-radius: 100%;
-    border: 5px solid #ebebeb;
+  .t-right {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: "none";
-    box-shadow: var(--smboxShadow);
-    background: white;
-}
-
-.t-secCircle > img{
-    transform: scale(0.040);
-}
-
-#t-secCircle2 > img{
-    transform: scale(0.025);
-}
-
-#t-secCircle3 > img{
-    transform: scale(0.060);
-}
-
-#t-secCircle1 > img{
-    transform: scale(0.030);
-}
-
-.t-backCircle{
-    position: absolute;
-    height: 13rem;  
-    width: 13rem;
-    border-radius: 100%;
-    z-index: -1;
-}
-
-.blueCircle{
-    background-color: var(--purple);
-    left: 15rem;
-    top: 1rem;
-}
-
-.yellowCircle{
-    background-color: #916aac;
-    left: 15rem;
-    top: 8rem;
-}
-
-.z-button{
-    width: 8rem;
-    height: 2rem;
-    margin-top: 2.5rem;
-}
-@media screen and (max-width: 480px) {
-    .techstack {
-      flex-direction: column;
-      height: 55rem;
-      padding: 0;
-      justify-content: center;
-      align-items: center;
-      gap: 5rem;
-    }
-  
-    .t-right {
-      display: flex;
-      align-items: flex-start;
-      justify-content: flex-start;
-      transform: scale(0.8);
-      left: 0.7rem;
-    }
-    .t-mainCircle{
-      position: static;
-    }
-    .t-backCircle{
-      left: 8rem !important;
-    }
-    .blueCircle{
-        left: 15rem;
-        top: -0.5rem;
-    }
-    
-    .yellowCircle{
-        left: 15rem;
-        top:6rem;
-    }
-    .t-left > :nth-child(3){
-        width: 300px;
-    }
+    transform: scale(0.8);
+    left: 5rem;
   }
+  .t-mainCircle {
+    position: static;
+  }
+  .t-backCircle {
+    left: 8rem !important;
+  }
+  .blueCircle {
+    left: 15rem;
+    top: -0.5rem;
+  }
+
+  .yellowCircle {
+    left: 15rem;
+    top: 6rem;
+  }
+  .t-left > :nth-child(3) {
+    width: 300px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1224px) {
+  .t-right {
+    position: relative;
+    left: -10rem;
+    top: auto;
+  }
+}
+.t-mainCircle {
+  transform: scale(0.85);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .techstack {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 2rem;
+    gap: 2rem;
+    height: 130vh;
+  }
+
+  .t-right {
+    transform: scale(0.85);
+    left: -5rem;
+  }
+
+  .t-backCircle {
+    transform: scale(0.85);
+  }
+
+  .t-left {
+    flex-direction: column;
+    align-items: center;
+    scale: 0.95;
+  }
+
+  .t-left > :nth-child(3) {
+    width: 100%;
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .techstack {
+    flex-direction: column;
+    height: auto;
+    padding: 0 1rem;
+    gap: 3rem;
+  }
+
+  .t-left > :nth-child(1) {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .t-left > :nth-child(2) {
+    font-size: 3.2rem;
+    text-align: center;
+  }
+
+  .t-left > :nth-child(3) {
+    font-size: 15px;
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: justify;
+  }
+
+   .t-right {
+    position: relative;
+    left: -5rem;
+    top: auto;
+     transform: scale(0.8);
+  }
+}
+
+
+.techstack-para {
+  margin-top: 1.2rem;
+  font-size: 1.1rem;
+}

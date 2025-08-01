@@ -1,9 +1,17 @@
 .footer{
     display: flex;
     align-items: center;
+    justify-items: center;
     margin: -0.5rem -3.5rem;
     position: relative;
     margin-top: -7rem;
+     overflow: hidden;
+}
+
+.footer img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .f-content{
@@ -21,7 +29,30 @@
 .f-icons{
     display: flex;
     gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1224px) {
+  .f-content {
+    transform: scale(.8);
+    padding-top: 2rem;
+    gap: 2rem;
+  }
+}
+
+@media screen and  (min-width: 480px) and (max-width: 768px) {
+  .f-content {
+    transform: scale(.7);
+    padding-top: 2rem;
+    gap: 2rem;
+  }
+
+  .f-icons {
+    gap: 1.5rem;
+  }
+}
+
 @media screen and (max-width: 480px){
     .f-content{
       transform: scale(.6);
