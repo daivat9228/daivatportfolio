@@ -5,7 +5,8 @@ import HTMLimg from "../img/html.png";
 import CSSpng from "../img/css3.png";
 import Javascript from "../img/javascript-logo.png";
 import Reacto from "../img/react-native-logo.png";
-import Bootstrap from "../img/bootstrap-framework-logo.png";
+// import Bootstrap from "../img/bootstrap-framework-logo.png";
+import TailwindCSS from "../img/TailwindCSS.png"
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -39,7 +40,7 @@ const Techstack = () => {
         <span>Stack</span>
         <div>
           As an aspiring intern, I have a basic understanding of HTML, CSS,
-          JavaScript, and React JS. I am familiar with HTML tags, CSS styling,
+          JavaScript, and React JS. I am familiar with HTML tags, CSS styling, Tailwind CSS
           and JavaScript functions. In addition, I have a good grasp of React JS
           components and their implementation. With my foundational skills in
           web development, I am excited to learn and grow as an intern in a
@@ -58,7 +59,7 @@ const Techstack = () => {
             <img src={HTMLimg} alt="html png" />
           </div>
           <div className="t-secCircle" id="t-secCircle2">
-            <img src={Bootstrap} alt="btsrp png" />
+            <img src={TailwindCSS} alt="btsrp png" />
           </div>
           <div className="t-secCircle">
             <img src={Reacto} alt="react png" />
