@@ -1,0 +1,123 @@
+
+.projects-section {
+  width: 95%;
+  min-height: 110vh;
+  padding: 5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.p-left {
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.p-left span {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: var(--black);
+}
+
+.p-left span span {
+  color: var(--purplelight);
+  font-size: 4rem;
+}
+
+/* Projects slider wrapper */
+.projects-slider-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  /* overflow: hidden; */
+}
+
+/* Projects grid/slider */
+.projects-slider {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2.5rem;
+  justify-items: center;
+  align-items: stretch;
+}
+
+/* Project card */
+.project-card {
+  background: #fff;
+  border-radius: 1.2rem;
+  box-shadow: 0 6px 13px rgba(0, 0, 0, 0.08);
+  transition: transform 0.5s ease-in, box-shadow 0.5s ease;
+  text-align: center;
+  padding: 1.2rem;
+  cursor: pointer;
+
+  display: flex;              /* make card flexible */
+  flex-direction: column;     /* stack title & image */
+  justify-content: space-between; /* distribute evenly */
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Project title */
+.project-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: 1rem;
+}
+
+/* Project image */
+.project-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0.8rem;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.05);
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .p-left span {
+    font-size: 2.5rem;
+  }
+
+  .p-left span span {
+    font-size: 3rem;
+  }
+
+  .project-image {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-section {
+    padding: 2rem 1rem;
+  }
+
+  .p-left span {
+    font-size: 2rem;
+  }
+
+  .p-left span span {
+    font-size: 2.5rem;
+  }
+
+  .project-title {
+    font-size: 1.1rem;
+  }
+
+  .project-image {
+    height: 160px;
+  }
+}

@@ -1,6 +1,6 @@
 .card {
-  width: 7rem;
-  height: 11rem;
+  width: 10rem;
+  height: 10rem;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -11,13 +11,13 @@
   background: rgba(231, 183, 243, 0.438);
   border: 7px solid var(--purpleCard);
   box-shadow: var(--boxShadow);
-  border-radius: 25px;
-  padding: 0px 26px 2rem 26px;
+  border-radius: 50%;
+  padding: 26px;
   }
 
   .card > img {
     transform: scale(1);
-    margin-top: 5rem;
+    /* margin-top: 5rem; */
   }
   .card > :nth-child(2){
     font-family:fantasy ;

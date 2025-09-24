@@ -1,0 +1,124 @@
+.hobby-section {
+  position: relative;
+  width: calc(100% + 4rem);  
+  margin-left: -2rem;       
+  margin-right: -2rem;       
+  height: 55vh;
+  display: flex;
+  flex-direction: column;  
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 5vh;
+  margin-bottom: 50px;
+  gap: 1.5rem;
+}
+
+/* Title Section */
+#h-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+#h-left span {
+  font-size: clamp(2rem, 3.5vw + 1.5rem, 4rem);
+  font-weight: bold;
+  color: var(--black);
+}
+
+#h-left span span {
+  color: var(--purplelight);
+  font-size: clamp(3rem, 4vw + 2rem, 5rem);
+}    
+
+/* Dot Style */
+#dot {
+  height: clamp(1.125rem, 2vw, 1.875rem);
+  width:  clamp(1.125rem, 2vw, 1.875rem);
+  background-color: var(--purplelight);
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 25px;
+}
+
+/* Hobby slider wrapper */
+#hobby-slidder-wrapper {
+  width: 100%;
+  overflow: hidden;
+  left: 50%;
+  transform: translateX(-50%) scale(1.4);
+  position: relative;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+/* Hobby slider main container */
+#hobby-slidder {
+  display: flex;
+  white-space: nowrap;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-78%);
+  }
+}
+
+
+/* .hobby.duplicate h1 {
+  color: var(--purpleultralight);     
+  -webkit-text-stroke: 2px var(--black); 
+} */
+
+
+/* Each hobby group */
+.hobby {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  background-color: var(--purpleultralight);  
+  max-height: clamp(2rem, 5vw, 5rem);
+  margin: 50px 0;
+  padding: 10px 0 18px 0;
+}
+
+.hobby h1 {
+  font-size: clamp(2rem, 5vw, 5rem);
+  font-weight: 500;
+  color: var(--black);
+  opacity: 0.9;
+  transform: scaleY(1.2)
+}
+
+.hobby :nth-of-type(odd) {
+  color: var(--purpleultralight);     /* same as .hobby bg */
+  -webkit-text-stroke: 2px var(--black); /* border outline */
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .hobby-section {
+    height: 60vh;
+    margin-top: 20vh;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px){
+  .hobby-section {
+    height: 60vh;
+    margin-top: 20vh;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .hobby-section {
+    height: 60vh;
+    margin-top: 20vh;
+  }
+}

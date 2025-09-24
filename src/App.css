@@ -8,6 +8,7 @@
   --boxShadow: 0px 19px 60px rgba(71, 42, 90, 0.349);
   --purpleCard: rgba(113, 3, 187, 0.295);
   --smboxShadow: -79px 51px 60px rgba(90, 64, 102, 0.185);
+  --grayLight: #858b92;
 }
 
 .App{
@@ -19,15 +20,16 @@
 .button{
   border-radius: 34px;
   border: none;
-  color: white;
+  color: var(--purple);
   font-size: 19px;
   padding: 11px 26px 11px 26px;
-  background: linear-gradient(180deg, #7610a5 26.71%, #9f21d1 99.36%);
-  box-shadow: 0px 20px 24px 3px rgba(132, 21, 184, 0.42);
+  background: white;
+  /* box-shadow: 0px 20px 24px 3px rgba(132, 21, 184, 0.42); */
+    border: 1px solid var(--purplelight);
 }
 .button:hover{
-  background: white;
+  background: var(--purple);
   cursor: pointer;
-  color: var(--purple);
-  border: 1px solid var(--purplelight);
+  color: white;
+
 }

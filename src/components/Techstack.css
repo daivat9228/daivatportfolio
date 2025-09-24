@@ -13,16 +13,17 @@
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
   backface-visibility: hidden;
   scale: 1;
+  width: 50%;
 }
 
 .t-left > :nth-child(1) {
-  font-size: 3.5rem;
+  font-size: clamp(2rem, 3.5vw + 1.5rem, 4rem);
   color: var(--black);
   font-weight: bold;
 }
 
 .t-left > :nth-child(2) {
-  font-size: 4.5rem;
+  font-size: clamp(3rem, 4vw + 2rem, 5rem);
   color: var(--purplelight);
   font-weight: bold;
 }
@@ -31,15 +32,18 @@
   width: 30rem;
   color: var(--gray);
   font-weight: 400;
-  font-size: 17px;
-  margin-top: 1rem;
+  font-size: 15px;
+  font-family: 'Verdana', Geneva, Tahoma, sans-serif;
+  margin-top: 3rem;
   text-align: justify;
+  text-shadow: none;
+  line-height: 1.5;
 }
 
 .t-right {
   position: relative;
-  left: -15rem;
-  top: auto;
+  width: 50%;
+  top: 5rem;
 }
 
 .t-mainCircle {
@@ -127,22 +131,119 @@
   top: 8rem;
 }
 
-@media screen and (max-width: 480px) {
+
+@media screen and (min-width: 1024px) and (max-width: 1224px) {
+  .t-right {
+    position: relative;
+    /* left: -10rem; */
+    top: 5rem;
+  }
+}
+.t-mainCircle {
+  transform: scale(0.85);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   .techstack {
     flex-direction: column;
-    height: 55rem;
-    padding: 0;
-    justify-content: center;
     align-items: center;
-    gap: 5rem;
+    padding: 0 2rem;
+    width: 95%;
+    height: 90vh;
   }
 
   .t-right {
-    display: flex;
+    /* transform: scale(0.85); */
+    width: 100%;
+    top: 0;
+    height: auto;
+    left: 130px;
+  }
+
+  .t-backCircle {
+    transform: scale(0.85);
+  }
+
+  .t-left {
+    flex-direction: column;
+    align-items: center;
+    /* scale: 0.95; */
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+
+  .t-left > :nth-child(3) {
+    width: 100%;
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .techstack {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 0 1rem;
+    gap: 3rem;
+  }
+
+  .t-left {
+    flex-direction: column;
+    align-items: center;
+    /* scale: 0.95; */
+    width: 100%;
+    /* gap: 1rem; */
+  }
+
+  /* .t-left > :nth-child(1) {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .t-left > :nth-child(2) {
+    font-size: 3.2rem;
+    text-align: center;
+  } */
+
+  .t-left > :nth-child(3) {
+    font-size: 15px;
+    width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: justify;
+  }
+
+   .t-right {
+    position: relative;
+    left: -10rem;
+    top: 3rem;
+     /* transform: scale(0.8); */
+  }
+}
+
+
+.techstack-para {
+  margin-top: 1.2rem;
+  font-size: 1.1rem;
+}
+
+
+@media screen and (max-width: 480px) {
+  .techstack {
+    flex-direction: column;
+    height: 45rem;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    /* gap: 5rem; */
+  }
+
+  .t-right {
+    /* display: flex; */
     align-items: center;
     justify-content: center;
-    transform: scale(0.8);
-    left: 4rem;
+    transform: scale(0.9);
+    /* left: 4rem; */
   }
 
  
@@ -173,85 +274,4 @@
   .t-left > :nth-child(3) {
     width: 300px;
   } */
-}
-
-@media screen and (min-width: 1024px) and (max-width: 1224px) {
-  .t-right {
-    position: relative;
-    left: -10rem;
-    top: auto;
-  }
-}
-.t-mainCircle {
-  transform: scale(0.85);
-}
-
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .techstack {
-    flex-direction: column;
-    align-items: center;
-    padding: 0 2rem;
-    gap: 2rem;
-    height: 130vh;
-  }
-
-  .t-right {
-    transform: scale(0.85);
-    left: -5rem;
-  }
-
-  .t-backCircle {
-    transform: scale(0.85);
-  }
-
-  .t-left {
-    flex-direction: column;
-    align-items: center;
-    scale: 0.95;
-  }
-
-  .t-left > :nth-child(3) {
-    width: 100%;
-    max-width: 90%;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .techstack {
-    flex-direction: column;
-    height: auto;
-    padding: 0 1rem;
-    gap: 3rem;
-  }
-
-  .t-left > :nth-child(1) {
-    font-size: 2.5rem;
-    text-align: center;
-  }
-
-  .t-left > :nth-child(2) {
-    font-size: 3.2rem;
-    text-align: center;
-  }
-
-  .t-left > :nth-child(3) {
-    font-size: 15px;
-    width: 100%;
-    max-width: 90%;
-    margin: 0 auto;
-    text-align: justify;
-  }
-
-   .t-right {
-    position: relative;
-    left: -5rem;
-    top: auto;
-     transform: scale(0.8);
-  }
-}
-
-
-.techstack-para {
-  margin-top: 1.2rem;
-  font-size: 1.1rem;
 }

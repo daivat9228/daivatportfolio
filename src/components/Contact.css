@@ -1,14 +1,16 @@
 .contact-form {
-  padding: 5rem 2rem 0 2rem;
+  padding: 0 2rem 0 2rem;
   display: flex;
-  height: 100vh;
+  height: auto;
+  min-height: 70vh;
+  margin-top: 10vh;
   justify-content: space-between;
 }
 .c-left {
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding-top: 5rem;
+  /* padding-top: 5rem; */
   transform-style: preserve-3d;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
   backface-visibility: hidden;
@@ -16,20 +18,20 @@
 .c-left > :nth-child(1) {
   color: var(--black);
   font-weight: bold;
-  font-size: 3.5rem;
+  font-size: clamp(2rem, 2.5vw + 1rem, 4rem);
 }
 
 .c-left > :nth-child(2) {
   color: var(--purplelight);
   font-weight: bold;
-  font-size: 4.5rem;
+  font-size: clamp(3rem, 3.5vw + 1.5rem, 5rem);
 }
 .c-right {
   display: flex;
   justify-content: center;
   position: relative;
   flex: 1.5;
-  padding-top: 5rem;
+  /* padding-top: 5rem; */
 }
 .c-right > form {
   display: flex;
@@ -42,8 +44,8 @@
   height: 2rem;
   padding: 0.3rem;
   outline: none;
-  border: 2px solid var(--purplelight);
-  border-radius: 8px;
+  border: 2px solid var(--black);
+  border-radius: 4px;
   font-size: 16px;
 }
 
@@ -53,22 +55,37 @@ textarea {
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1224px) {
-  .c-left {
-    transform: scale(0.8) !important;
-    min-width: 30rem;
+  .contact-form {
+    height: auto;
+    min-height: 65vh;
+    margin-bottom: 2vh;
+    margin-top: 18vh;
   }
+
+  .c-left {
+    min-width: 50%;
+  }
+
+  .c-left > :nth-child(1)
+   {
+    font-size: 5vw;
+  }
+
+  .c-left > :nth-child(2){
+    font-size: 7vw;
+  }
+
   .c-right {
-    transform: scale(0.9);
+    min-width: 50%;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  .c-left {
-    transform: scale(0.7) !important;
-    min-width: 25rem;
-  }
-  .c-right {
-    transform: scale(0.8);
+ .contact-form {
+    height: auto;
+    min-height: 65vh;
+    margin-bottom: 4vh;
+    margin-top: 15vh;
   }
 }
 
@@ -76,21 +93,23 @@ textarea {
   .contact-form {
     flex-direction: column;
     gap: 4rem;
-    padding: 4rem 1rem 2rem 1rem;
     margin: 4rem 1rem 6rem 1rem;
-    min-height: auto;
+    height: auto;
   }
 
   .c-left {
     align-items: center;
     text-align: center;
     padding-top: 2rem;
-    scale: 0.9;
   }
 
-  .c-left > :nth-child(1),
-  .c-left > :nth-child(2) {
-    font-size: 2.8rem;
+  .c-left > :nth-child(1)
+   {
+    font-size: 7vw;
+  }
+
+  .c-left > :nth-child(2){
+    font-size: 9vw;
   }
 
   .c-right {
@@ -113,7 +132,7 @@ textarea {
     justify-content: center !important;
     align-items: center !important;
     gap: 3rem;
-    height: 60vh;
+    height: auto;
   }
   .c-right .user {
     width: 16rem;

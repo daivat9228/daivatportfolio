@@ -32,6 +32,8 @@ const Techstack = () => {
       }
     );
   }, []);
+
+  
   return (
     <div className="techstack" id="Techstack">
       {/* left side */}
@@ -39,12 +41,7 @@ const Techstack = () => {
         <span>Tech</span>
         <span>Stack</span>
         <div>
-          As an aspiring intern, I have a basic understanding of HTML, CSS,
-          JavaScript, and React JS. I am familiar with HTML tags, CSS styling, Tailwind CSS
-          and JavaScript functions. In addition, I have a good grasp of React JS
-          components and their implementation. With my foundational skills in
-          web development, I am excited to learn and grow as an intern in a
-          supportive and collaborative environment.
+         I have a basic foundation in HTML, CSS, Tailwind CSS, and JavaScript, with hands-on experience in building responsive and visually appealing user interfaces. I am proficient in React JS, focusing on component-based architecture and efficient state management. Additionally, I am familiar with React Native for creating cross-platform mobile applications and have explored GSAP to add smooth and engaging animations to projects. With these skills, I continuously strive to enhance my expertise and deliver clean, user-friendly, and dynamic web experiences..
         </div>
       </div>
       <div className="t-right">

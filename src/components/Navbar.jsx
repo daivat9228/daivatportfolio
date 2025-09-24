@@ -68,7 +68,7 @@ function Navbar() {
       <div className="n-right">
         <div className="n-list">
           <ul>
-            {["Home", "Techstack", "Hobbies", "Timeline", "Contact"].map((item, index) => (
+            {["Home", "Techstack", "Hobbies", "Timeline", "Projects",  "Contact"].map((item, index) => (
               <li key={index} ref={el => (menuItemsRef.current[index] = el)}>
                 <Link activeClass="active" to={item} spy={true} smooth={true}>
                   {item}

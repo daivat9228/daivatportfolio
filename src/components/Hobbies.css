@@ -34,9 +34,12 @@
   width: 30rem;
   color: var(--gray);
   font-weight: 400;
-  font-size: 17px;
-  margin-top: 1rem;
+  font-size: 15px;
+  font-family: 'Verdana', Geneva, Tahoma, sans-serif;
+  margin-top: 3rem;
+  line-height: 1.5;
   text-align: justify;
+  text-shadow: none;
 }
 
 .cards {
