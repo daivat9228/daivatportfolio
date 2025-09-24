@@ -1,21 +1,24 @@
 {
   "files": {
-    "main.css": "/daivatportfolio/static/css/main.11e418ce.css",
-    "main.js": "/daivatportfolio/static/js/main.1efc2718.js",
+    "main.css": "/daivatportfolio/static/css/main.0e54ebea.css",
+    "main.js": "/daivatportfolio/static/js/main.bc3311bd.js",
     "static/media/css3.png": "/daivatportfolio/static/media/css3.5d1e9b1f4ab7f72ce7bc.png",
     "static/media/html.png": "/daivatportfolio/static/media/html.edb334b841dbb79cce57.png",
     "static/media/react-native-logo.png": "/daivatportfolio/static/media/react-native-logo.25051af63aa43aba1cf6.png",
+    "static/media/Quick_Eats_thumbnail.png": "/daivatportfolio/static/media/Quick_Eats_thumbnail.97d7cf23ae4152c25c65.png",
+    "static/media/Food_Delivery_web_thumbnail.png": "/daivatportfolio/static/media/Food_Delivery_web_thumbnail.a9adcadc76f8ea3d4001.png",
+    "static/media/Portfolio_thumbnail.png": "/daivatportfolio/static/media/Portfolio_thumbnail.3c09de3f48e0c1c35321.png",
     "static/media/javascript-logo.png": "/daivatportfolio/static/media/javascript-logo.0441209bbd91f7bf1e11.png",
     "static/media/TailwindCSS.png": "/daivatportfolio/static/media/TailwindCSS.fdec46372df17366cc1c.png",
     "static/media/wave.svg": "/daivatportfolio/static/media/wave.5a0a0f9fcf7304abbec377ab545ce2a0.svg",
     "static/media/school.svg": "/daivatportfolio/static/media/school.f919580e0fc8b339396369d8c196870c.svg",
     "static/media/work.svg": "/daivatportfolio/static/media/work.f4b6d08987ae2b497cea53de7dadf525.svg",
     "index.html": "/daivatportfolio/index.html",
-    "main.11e418ce.css.map": "/daivatportfolio/static/css/main.11e418ce.css.map",
-    "main.1efc2718.js.map": "/daivatportfolio/static/js/main.1efc2718.js.map"
+    "main.0e54ebea.css.map": "/daivatportfolio/static/css/main.0e54ebea.css.map",
+    "main.bc3311bd.js.map": "/daivatportfolio/static/js/main.bc3311bd.js.map"
   },
   "entrypoints": [
-    "static/css/main.11e418ce.css",
-    "static/js/main.1efc2718.js"
+    "static/css/main.0e54ebea.css",
+    "static/js/main.bc3311bd.js"
   ]
 }
