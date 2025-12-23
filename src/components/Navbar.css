@@ -108,6 +108,7 @@
 } 
 
 @media screen and (max-width: 480px) {
+  
   .n-list {
     display: none;
   }
@@ -115,7 +116,7 @@
     display: none;
   }
   .n-left {
-    gap: 8rem;
+    gap: 10rem;
     justify-content: left;
   }
   .n-name {

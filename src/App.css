@@ -30,6 +30,14 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+@media screen and (max-width: 480px) {
+  .App{
+    margin-bottom: 85vh;
+  }
+}
+
+
+
 .App.dark-theme {
   background: #121212;
   color: white;
