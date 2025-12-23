@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/daivatportfolio/static/css/main.bf8eb046.css",
+    "main.css": "/daivatportfolio/static/css/main.afcc4c2d.css",
     "main.js": "/daivatportfolio/static/js/main.d4f9d6d6.js",
     "static/css/650.390eb5a0.chunk.css": "/daivatportfolio/static/css/650.390eb5a0.chunk.css",
     "static/js/650.f3198bcf.chunk.js": "/daivatportfolio/static/js/650.f3198bcf.chunk.js",
@@ -28,7 +28,7 @@
     "static/media/school.svg": "/daivatportfolio/static/media/school.f919580e0fc8b339396369d8c196870c.svg",
     "static/media/work.svg": "/daivatportfolio/static/media/work.f4b6d08987ae2b497cea53de7dadf525.svg",
     "index.html": "/daivatportfolio/index.html",
-    "main.bf8eb046.css.map": "/daivatportfolio/static/css/main.bf8eb046.css.map",
+    "main.afcc4c2d.css.map": "/daivatportfolio/static/css/main.afcc4c2d.css.map",
     "main.d4f9d6d6.js.map": "/daivatportfolio/static/js/main.d4f9d6d6.js.map",
     "650.390eb5a0.chunk.css.map": "/daivatportfolio/static/css/650.390eb5a0.chunk.css.map",
     "650.f3198bcf.chunk.js.map": "/daivatportfolio/static/js/650.f3198bcf.chunk.js.map",
@@ -46,7 +46,7 @@
     "124.15c52bb7.chunk.js.map": "/daivatportfolio/static/js/124.15c52bb7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bf8eb046.css",
+    "static/css/main.afcc4c2d.css",
     "static/js/main.d4f9d6d6.js"
   ]
 }
