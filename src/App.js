@@ -1,9 +1,9 @@
 import React, { Suspense, useState, useRef, useContext } from 'react';
-import './App.css';
 import Navbar from './components/Navbar';
 import Intro from './components/Intro';
 import Preloader from './components/Preloader';
 import { ThemeContext } from './Context';
+import './App.css';
 
 // Lazy load heavy components
 const Techstack = React.lazy(() => import('./components/Techstack'));
