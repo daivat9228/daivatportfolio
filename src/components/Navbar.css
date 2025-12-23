@@ -116,9 +116,11 @@
   }
   .n-left {
     gap: 8rem;
+    justify-content: left;
   }
   .n-name {
     width: 100px;
-    left: 2.5rem;
+    padding: 2rem 1rem;
+    /* left: 2.5rem; */
   }
 }

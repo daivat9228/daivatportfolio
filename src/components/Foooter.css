@@ -126,17 +126,18 @@
 
 @media screen and (max-width: 480px) {
   .foooter-container {
-    width: 95%;
+    width: 90%;
+    height: auto;
   }
 
   .foooter-left {
-    align-self: flex-start;
+    align-self:center;
     padding: 0.5rem 3rem;
   }
   
   .foooter-right {
     display: flex;
-    align-self: flex-end;
+    align-self: center;
     padding: 0.5rem 3rem;
   }
   

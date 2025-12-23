@@ -1,4 +1,4 @@
-.contacts{
+.contacts {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -38,7 +38,7 @@
   border: 1px solid var(--black);
   border-radius: 8px;
   background: var(--black);
-  transition: all 0.5s ease-in-out; 
+  transition: all 0.5s ease-in-out;
 }
 
 .contacts-right {
@@ -53,7 +53,7 @@
 }
 
 .portfolio-card,
-.description-card{
+.description-card {
   padding: clamp(1rem, 2vw + 0.5rem, 2.5rem);
   background: rgba(255, 255, 255, 0.05);
 }
@@ -93,7 +93,7 @@
   letter-spacing: 1px;
 }
 
-.section-label > span {
+.section-label>span {
   font-size: 1rem;
   font-weight: 500;
 }
@@ -151,16 +151,16 @@
   left: 0;
   background-color: var(--purple);
   transition: width 0.3s ease;
-  z-index:50
-} 
+  z-index: 50
+}
 
 .contact-btn:hover::after {
   width: 100%;
-   color: var(--purple);
+  color: var(--purple);
 }
 
 
-.contacts-right:hover  {
+.contacts-right:hover {
   background: rgba(255, 255, 255, 0.567);
   color: #333;
   transition: all 0.5s ease-in-out;
@@ -171,24 +171,24 @@
   transition: all 0.5s ease-in-out;
 }
 
-.contacts-left:hover{
-  background:var(--purpleCard);
+.contacts-left:hover {
+  background: var(--purpleCard);
   color: rgb(232, 230, 230);
   transition: all 0.5s ease-in-out;
 }
 
 @media screen and (max-width: 768px) {
-  .contacts{
+  .contacts {
     height: 90vh;
   }
 
   .contacts-container {
     flex-direction: column;
     min-height: auto;
-    padding: 2rem ;
+    padding: 2rem;
     margin-top: 2rem;
   }
-  
+
   .contacts-left,
   .contacts-right {
     padding: 0.5rem;
@@ -197,24 +197,24 @@
   .contacts-right {
     margin-bottom: 3rem;
   }
-  
+
   .portfolio-section h2 {
     font-size: 2rem;
   }
-  
+
   .get-in-touch h2 {
     font-size: 1.8rem;
   }
-  
+
   .start-project h1 {
     font-size: 2.5rem;
   }
 
-  .get-in-touch-card{
+  .get-in-touch-card {
     flex: 1;
   }
 
-  .start-project-card{
+  .start-project-card {
     flex: 2;
     display: flex;
     flex-direction: row;
@@ -222,27 +222,29 @@
 }
 
 @media screen and (max-width: 480px) {
-  .contacts-container{
-    padding: 2.5rem 0;
+  .contacts-container {
+    height: auto;
+    flex-direction: column;
+    padding: 4rem 2rem 0 2rem;
   }
 
   .contacts-left,
   .contacts-right {
     padding: 0.5rem;
   }
-  
+
   .portfolio-section h2 {
     font-size: 1.5rem;
   }
-  
+
   .get-in-touch h2 {
     font-size: 1.4rem;
   }
-  
+
   .start-project-card h1 {
     font-size: 2rem;
   }
-  
+
   .contact-btn {
     padding: 0.8rem 1.5rem;
     font-size: 1rem;
@@ -250,22 +252,22 @@
 }
 
 @media screen and (min-width: 768px)and (max-width: 1024px) {
-  .get-in-touch-card{
+  .get-in-touch-card {
     flex: 2;
   }
 
-  .start-project-card{
+  .start-project-card {
     flex: 1;
     flex-direction: column;
   }
 }
 
 @media screen and (max-width: 640px) {
-    .get-in-touch-card{
+  .get-in-touch-card {
     flex: 2;
   }
 
-  .start-project-card{
+  .start-project-card {
     flex: 1;
     flex-direction: column;
     gap: 15px;
