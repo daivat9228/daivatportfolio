@@ -117,7 +117,7 @@
   }
   .n-left {
     gap: 10rem;
-    justify-content: left;
+    justify-content: space-between;
   }
   .n-name {
     width: 100px;

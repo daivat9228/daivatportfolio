@@ -132,13 +132,13 @@
 
   .foooter-left {
     align-self:center;
-    padding: 0.5rem 3rem;
+    padding: 1rem 3rem;
   }
   
   .foooter-right {
     display: flex;
     align-self: center;
-    padding: 0.5rem 3rem;
+    padding: 1rem 3rem;
   }
   
   .social-link {

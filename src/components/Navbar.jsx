@@ -11,7 +11,6 @@ function Navbar() {
   const buttonRef = useRef(null);
   const [isNavVisible, setIsNavVisible] = useState(false);
 
-
   useGSAP(() => {
     gsap.from(leftRef.current, {
       x: -100,
@@ -69,7 +68,6 @@ function Navbar() {
     }
   };
 
-  
   return (
     <div className="n-wrapper">
       <div className="n-left" ref={leftRef}>
