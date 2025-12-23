@@ -1,5 +1,5 @@
 .timeline {
-  padding: 0 2rem 0 2rem;
+  padding: 0 5rem 0 5rem;
 }
 .tl-left {
   display: flex;
@@ -25,32 +25,51 @@
 
 .vertical-timeline-element-content {
   box-sizing: border-box;
-  box-shadow: var(--boxShadow);
-  padding: 2rem 2rem !important;
-  border-radius: 15px !important;
-  filter: brightness(96%);
+  box-shadow: var(--smboxShadow);
+  padding: 1.5rem 1.5rem !important;
+  border-radius: 0px !important;
+  border-top: 5px solid var(--purplelight);
+  background-color: var(--bg-content);
 }
 
 .tl-right h3 {
-font-size: clamp(1rem, 1vw + 0.5rem, 1.5rem);
+  font-size: clamp(1rem, 1vw + 0.5rem, 1.2rem);
   font-weight: 700;
-  margin-bottom: 5px;
+  margin: 0 0 0.5rem 0 !important;
   color: rgb(69, 68, 68);
 }
+
 .tl-right h5 {
-font-size: clamp(0.8rem, 0.5vw + 0.6rem, 1rem);
+  font-size: clamp(0.8rem, 0.5vw + 0.6rem, 0.8rem);
   font-weight: 600;
-  margin-bottom: 5px;
   color: var(--black);
+  margin: 0 0 0.5rem 0 !important;
 }
+
+
 
 #description {
   font-size: 13px;
   font-weight: 400;
-  color: var(--gray);
+  color: var(--grayLight);
   text-align: justify;
   font-family: "Verdana", Geneva, Tahoma, sans-serif;
 
+}
+
+
+@media screen and (max-width: 768px) {
+  .tl-left > :nth-child(1),
+  .tl-left > :nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .timeline {
+    padding: 0 3rem 0 3rem;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -61,7 +80,7 @@ font-size: clamp(0.8rem, 0.5vw + 0.6rem, 1rem);
     align-items: center;
   }
   .timeline {
-    padding: 2rem 0.5rem 7rem 0.5rem;
+    padding: 0 3rem 0 3rem;
     justify-content: center;
     align-items: center;
   }

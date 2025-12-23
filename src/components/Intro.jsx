@@ -78,9 +78,9 @@ function Intro() {
           <span ref={nameRef} className="threeD-text">
             Daivat Dhimmar
           </span>
-          <span ref={descRef} className="threeD-text">
+          <span ref={descRef} >
             Front-End developer with basic level of understanding in HTML, CSS,
-            JavaScript & React JS
+            JavaScript, Typescript, React JS and Next JS.
           </span>
         </div>
       </div>

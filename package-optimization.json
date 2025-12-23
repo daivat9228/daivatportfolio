@@ -1,0 +1,13 @@
+{
+  "name": "image-optimization-dependencies",
+  "description": "Run these commands to install image optimization tools",
+  "commands": [
+    "npm install --save-dev imagemin imagemin-webp imagemin-pngquant",
+    "node optimize-images.js"
+  ],
+  "benefits": {
+    "webp": "60-80% smaller file sizes than PNG",
+    "lazy-loading": "Only loads images when visible",
+    "compression": "Reduces PNG file sizes by 40-60%"
+  }
+}

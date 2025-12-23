@@ -1,17 +1,17 @@
 .n-wrapper {
-  height: 10vh;
+  height: 15vh;
   display: flex;
+  align-content: center;
   justify-content: space-between;
   flex-wrap: wrap;
   background-color: var(--bg);
+  padding: 0 2rem;
 }
 
 .n-left {
-  flex: 1;
   display: flex;
   align-items: center;
   gap: 2rem;
-  flex: 1;
 }
 
 .n-name {
@@ -22,24 +22,29 @@
 
 .n-right {
   display: flex;
-  flex: 1;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   font-weight: 400;
 }
 
-.n-list {
-  flex: 10;
-}
+/* .n-list {
+  flex: 5;
+} */
 
 .n-list > ul {
   display: flex;
   list-style: none;
   gap: 2rem;
-  margin-right: 4rem;
+  margin-right: 3rem;
+  
+}
+
+.n-list > ul > li {
+  overflow: hidden;
+  white-space: nowrap;
   font-family: 'Verdana', Geneva, Tahoma, sans-serif;
+  font-size: clamp(0.75rem, 2vw, 0.9rem);
   font: 500;
-  font-size: 0.9rem;
 }
 
 .n-list > ul > li:hover {
@@ -48,8 +53,29 @@
 }
 
 .n-button {
-  flex: 2;
+  display: inline-block;
+  padding: 0 1.5rem;
 }
+
+
+.desktop-hamburger span {
+  position: relative;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--purplelight);
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+}
+
+.desktop-hamburger:hover {
+  color: var(--purple);
+}
+
+
 @media screen and (max-width: 1024px) {
   .n-wrapper {
     flex-direction: row;
@@ -57,17 +83,13 @@
   }
 
   .n-left {
-    flex: 1;
+  
     gap: 1rem;
   }
 
   .n-right {
-    flex: 2;
+   
     justify-content: center;
-  }
-
-  .n-button {
-    padding: 0.4rem 1rem;
   }
 }
 

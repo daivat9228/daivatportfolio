@@ -1,15 +1,15 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState, useCallback } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import "./Project.css";
-import Portfolio_thumbnail from "../img/Portfolio_thumbnail.png";
-import Quick_Eats_thumbnail from "../img/Quick_Eats_thumbnail.png";
-import Food_Delivery_web_thumbnail from "../img/Food_Delivery_web_thumbnail.png";
+import Portfolio_thumbnail from "../img/optimized/Portfolio_thumbnail.webp";
+import Quick_Eats_thumbnail from "../img/optimized/Quick_Eats_thumbnail.webp";
+import Food_Delivery_web_thumbnail from "../img/optimized/Food_Delivery_web_thumbnail.webp";
 import { ThemeContext } from "../Context";
+import "./Project.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Project = () => {
+const Project = React.forwardRef((props, ref) => {
   const imageRef = useRef(null);
   const elemRef = useRef(null)
   const theme = useContext(ThemeContext);
@@ -18,108 +18,122 @@ const Project = () => {
   // ✅ Track screen width for responsive rendering
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);
 
-  useEffect(() => {
-    const handleResize = () => setIsDesktop(window.innerWidth >= 768);
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+  // Debounced resize handler
+  const handleResize = useCallback(() => {
+    const timeoutId = setTimeout(() => {
+      setIsDesktop(window.innerWidth >= 768);
+    }, 100);
+    return () => clearTimeout(timeoutId);
   }, []);
 
-  // ✅ Update image styles based on theme
   useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [handleResize]);
+
+  // Combined theme and desktop effects
+  useEffect(() => {
+    // Update image filter
     if (imageRef.current) {
       imageRef.current.style.filter = darkMode ? "brightness(0.8)" : "none";
     }
-  }, [darkMode]);
 
-  // ✅ Update elem color based on theme
-  useEffect(() => {
-    if (!isDesktop) return; 
-    if(elemRef.current){
-      elemRef.current.style.backgroundColor = darkMode ? "#887c9224" : "none"
-    }
-  }, [darkMode]);
+    // Update elem background (desktop only)
+    if (isDesktop) {
+      if (elemRef.current) {
+        elemRef.current.style.backgroundColor = darkMode ? "#79727d2c" : "none";
+      }
 
-  // ✅ Hover background update only for desktop
-  useEffect(() => {
-    if (!isDesktop) return;
-    const elems = document.querySelectorAll(".elem");
-
-    elems.forEach((elem) => {
-      gsap.to(elem, {
-        backgroundColor: darkMode ? "#887c9224" : "white",
-        duration: 0.3,
-        ease: "power2.inOut",
+      // Update all elem backgrounds
+      const elems = document.querySelectorAll(".elem");
+      elems.forEach((elem) => {
+        gsap.to(elem, {
+          backgroundColor: darkMode ? "#887c9224" : "white",
+          duration: 0.3,
+          ease: "power2.inOut",
+        });
       });
-    });
+    }
   }, [darkMode, isDesktop]);
 
-  // ✅ Hover preview only for desktop
+  // Memoized event handlers
+  const handleMouseEnter = useCallback((elem, overlay, imgSrc, btnOverlay) => {
+    gsap.to(overlay, { y: 0, duration: 0.5, ease: "power3.inOut" });
+    if (btnOverlay) {
+      gsap.to(btnOverlay, { y: 0, duration: 0.5, ease: "power3.inOut" });
+    }
+    if (imageRef.current) {
+      imageRef.current.src = imgSrc;
+      gsap.to(imageRef.current, {
+        opacity: 1,
+        scale: 1,
+        duration: 0.5,
+        ease: "power3.out",
+      });
+    }
+  }, []);
+
+  const handleMouseLeave = useCallback((overlay, btnOverlay) => {
+    gsap.to(overlay, { y: "-100%", duration: 0.5, ease: "power3.inOut" });
+    if (btnOverlay) {
+      gsap.to(btnOverlay, {
+        y: "-100%",
+        duration: 0.5,
+        ease: "power3.inOut",
+      });
+    }
+    if (imageRef.current) {
+      gsap.to(imageRef.current, {
+        opacity: 0,
+        scale: 0.95,
+        duration: 0.5,
+        ease: "power3.in",
+      });
+    }
+  }, []);
+
+  const handleClick = useCallback((link) => {
+    if (link) window.open(link, "_blank");
+  }, []);
+
+  // Combined hover and click events (desktop only)
   useEffect(() => {
     if (!isDesktop) return;
 
     const elems = document.querySelectorAll(".elem");
+    const cleanupFunctions = [];
 
     elems.forEach((elem) => {
       const overlay = elem.querySelector(".overlay");
       const imgSrc = elem.getAttribute("data-img");
       const btnOverlay = elem.querySelector(".btn-overlay");
+      const link = elem.getAttribute("data-link");
 
-      // Mouse Enter
-      elem.addEventListener("mouseenter", () => {
-        gsap.to(overlay, { y: 0, duration: 0.5, ease: "power3.inOut" });
-        if (btnOverlay) {
-          gsap.to(btnOverlay, { y: 0, duration: 0.5, ease: "power3.inOut" });
-        }
-        if (imageRef.current) {
-          imageRef.current.src = imgSrc;
-          gsap.to(imageRef.current, {
-            opacity: 1,
-            scale: 1,
-            duration: 0.5,
-            ease: "power3.out",
-          });
-        }
-      });
+      const mouseEnterHandler = () => handleMouseEnter(elem, overlay, imgSrc, btnOverlay);
+      const mouseLeaveHandler = () => handleMouseLeave(overlay, btnOverlay);
+      const clickHandler = () => handleClick(link);
 
-      // Mouse Leave
-      elem.addEventListener("mouseleave", () => {
-        gsap.to(overlay, { y: "-100%", duration: 0.5, ease: "power3.inOut" });
-        if (btnOverlay) {
-          gsap.to(btnOverlay, {
-            y: "-100%",
-            duration: 0.5,
-            ease: "power3.inOut",
-          });
-        }
-        if (imageRef.current) {
-          gsap.to(imageRef.current, {
-            opacity: 0,
-            scale: 0.95,
-            duration: 0.5,
-            ease: "power3.in",
-          });
-        }
+      elem.addEventListener("mouseenter", mouseEnterHandler);
+      elem.addEventListener("mouseleave", mouseLeaveHandler);
+      elem.addEventListener("click", clickHandler);
+
+      cleanupFunctions.push(() => {
+        elem.removeEventListener("mouseenter", mouseEnterHandler);
+        elem.removeEventListener("mouseleave", mouseLeaveHandler);
+        elem.removeEventListener("click", clickHandler);
       });
     });
-  }, [isDesktop]);
 
-  // ✅ Click to open link (always active)
+    return () => cleanupFunctions.forEach(cleanup => cleanup());
+  }, [isDesktop, handleMouseEnter, handleMouseLeave, handleClick]);
+
+  // Scroll animations (run once)
   useEffect(() => {
     const elems = document.querySelectorAll(".elem");
-    elems.forEach((elem) => {
-      elem.addEventListener("click", () => {
-        const link = elem.getAttribute("data-link");
-        if (link) window.open(link, "_blank");
-      });
-    });
-  }, []);
-
-  // ✅ Scroll animations
-  useEffect(() => {
-    const elems = document.querySelectorAll(".elem");
+    const scrollTriggers = [];
 
     elems.forEach((elem) => {
-      gsap.fromTo(
+      const trigger = gsap.fromTo(
         elem,
         { opacity: 0, y: 50 },
         {
@@ -134,11 +148,18 @@ const Project = () => {
           },
         }
       );
+      scrollTriggers.push(trigger);
     });
+
+    return () => {
+      scrollTriggers.forEach(trigger => {
+        if (trigger.scrollTrigger) trigger.scrollTrigger.kill();
+      });
+    };
   }, []);
 
   return (
-    <div id="Projects" className="projects-sec">
+    <div id="Projects" className="projects-sec" ref={ref}>
       <div className="p-left">
         <span>
           My <span>Projects</span>
@@ -159,7 +180,7 @@ const Project = () => {
           data-link="https://daivat9228.github.io/daivatportfolio/"
         >
           <div className="overlay"></div>
-          <img src={Portfolio_thumbnail} alt="Portfolio_thumbnail" />
+          <img src={Portfolio_thumbnail} alt="Portfolio_thumbnail" loading="lazy" />
           <h2>1. Portfolio Website</h2>
           <h5>
             Portfolio website using React.js with hands-on experience in Context
@@ -174,7 +195,7 @@ const Project = () => {
           data-link="https://daivat9228.github.io/Quick-Eats/"
         >
           <div className="overlay"></div>
-          <img src={Quick_Eats_thumbnail} alt="Quick_Eats_thumbnail" />
+          <img src={Quick_Eats_thumbnail} alt="Quick_Eats_thumbnail" loading="lazy" />
           <h2>2. Quick Eats website</h2>
           <h5>
             Food delivery web app using React.js, Tailwind CSS, useState,
@@ -185,13 +206,13 @@ const Project = () => {
         <div
           className="elem"
           data-img={Food_Delivery_web_thumbnail}
-          data-link="https://daivat9228.github.io/food-delivery-web/"
+          data-link="https://essense-next-js-project-sdiy.vercel.app/"
         >
           <div className="overlay"></div>
-          <img src={Food_Delivery_web_thumbnail} alt="Food_Delivery_web_thumbnail" />
-          <h2>3. Food Delivery website</h2>
+          <img src={Food_Delivery_web_thumbnail} alt="Essence_e-commerce_web_thumbnail" loading="lazy" />
+          <h2>3. Essence e-commerce website</h2>
           <h5>
-            Food delivery web app using React.js, Tailwind CSS, useState,
+            Essence e-commerce web app using NextJS, Tailwind CSS, useState,
             useEffect, map/filter/forEach methods, Context API, and Redux
             Toolkit for robust state management.
           </h5>
@@ -199,31 +220,22 @@ const Project = () => {
 
         <div className="elem" data-img={Quick_Eats_thumbnail} data-link="https://quick-eats-r-napp.vercel.app/">
           <div className="overlay"></div>
-          <img src={Quick_Eats_thumbnail} alt="" />
-          <h2>4. Food Delivery mobile App</h2>
+          <img src={Quick_Eats_thumbnail} alt="" loading="lazy" />
+          <h2>4. Quick Eats mobile App</h2>
           <h5>
             Food delivery mobile app using React native, Tailwind CSS, useState, useEffect, map/filter/forEach methods, Context API, and Redux Toolkit for robust state management.
-          </h5>
-        </div>
-
-        <div className="elem" data-img="https://picsum.photos/800/500?random=4">
-          <div className="overlay"></div>
-          <img src="https://picsum.photos/800/500?random=4" alt="" />
-          <h2>5. Lorem, ipsum.</h2>
-          <h5>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, neque! Facere, quam. Fuga, adipisci facilis! Iure tempore corporis perspiciatis nobis.
           </h5>
         </div>
       </div>
 
       <div id="all-projects">
-        <div className="btn-elem">
+        <div className="button btn-elem">
           <div className="btn-overlay"></div>
-          <a>All Projects {"->"}</a>
+          <a href='/projects'>All Projects {" →"}</a>
         </div>
       </div>
     </div>
   );
-};
+});
 
 export default Project;

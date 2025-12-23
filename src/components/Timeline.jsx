@@ -7,10 +7,11 @@ import "react-vertical-timeline-component/style.min.css";
 import "./Timeline.css";
 
 
-function Timeline() {
+const Timeline = (props) => {
 
     let workIconStyle = {background: "var(--purplelight)"};
     let studyIconStyle = { background:"var(--purpleultralight)"}
+
     
   return (
     <div className='timeline' id='Timeline'>

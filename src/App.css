@@ -1,35 +1,60 @@
 :root{
   --purple: #623183;
-  --purplelight: #7438a5;
-  --black: #49526d;
-  --gray: #51545e;
+  --purplelight: #8044b2;
+  --black: #454d61;
+  --gray: #575b65;
   --blueCard: #DDF8FE;
-  --purpleultralight: rgb(238, 210, 255);
+  --purpleultralight: rgba(238, 210, 255, 0.697);
   --boxShadow: 0px 19px 60px rgba(71, 42, 90, 0.349);
-  --purpleCard: rgba(113, 3, 187, 0.295);
-  --smboxShadow: -79px 51px 60px rgba(90, 64, 102, 0.185);
-  --grayLight: #858b92;
+  --purpleCard: rgba(113, 3, 187, 0.25);
+  --smboxShadow: -50px 70px 190px rgba(90, 64, 102, 0.185);
+  --grayLighter: #a0a1a2;
+  --violet: #46289a;
+  --grayLight: #777777;
+}
+
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  margin-bottom: 0;
 }
 
 .App{
-  padding: 0.5rem 2rem;
-  overflow: hidden;
+  padding: 0.5rem 0 0 0 ;
+  overflow: visible;
   color: var(--black);
-  margin: 0;
+  background: white;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 90vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+.App.dark-theme {
+  background: #121212;
+  color: white;
+}
+
+.App.light-theme {
+  background: white;
+  color: var(--black);
+}
+
 .button{
-  border-radius: 34px;
+  border-radius: 40px;
   border: none;
   color: var(--purple);
-  font-size: 19px;
-  padding: 11px 26px 11px 26px;
-  background: white;
+  font-size: 12px;
+  font-weight: 100;
+  font-family: 'Verdana', Geneva, Tahoma, sans-serif;
+  padding: 6px 16px;
+  background:none;
   /* box-shadow: 0px 20px 24px 3px rgba(132, 21, 184, 0.42); */
-    border: 1px solid var(--purplelight);
+  border: 1px solid var(--purplelight);
 }
+
 .button:hover{
   background: var(--purple);
   cursor: pointer;
   color: white;
-
 }

@@ -6,7 +6,7 @@ import CSSpng from "../img/css3.png";
 import Javascript from "../img/javascript-logo.png";
 import Reacto from "../img/react-native-logo.png";
 // import Bootstrap from "../img/bootstrap-framework-logo.png";
-import TailwindCSS from "../img/TailwindCSS.png"
+import TailwindCSS from "../img/TailwindCSS.png";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -27,13 +27,12 @@ const Techstack = () => {
         scrollTrigger: {
           trigger: tLeftRef.current,
           start: "top 80%",
-          toggleActions: 'play none none reverse',
+          toggleActions: "play none none reverse",
         },
       }
     );
   }, []);
 
-  
   return (
     <div className="techstack" id="Techstack">
       {/* left side */}
@@ -41,7 +40,17 @@ const Techstack = () => {
         <span>Tech</span>
         <span>Stack</span>
         <div>
-         I have a basic foundation in HTML, CSS, Tailwind CSS, and JavaScript, with hands-on experience in building responsive and visually appealing user interfaces. I am proficient in React JS, focusing on component-based architecture and efficient state management. Additionally, I am familiar with React Native for creating cross-platform mobile applications and have explored GSAP to add smooth and engaging animations to projects. With these skills, I continuously strive to enhance my expertise and deliver clean, user-friendly, and dynamic web experiences..
+          I have a strong foundation in HTML, CSS, Tailwind CSS, JavaScript, and
+          TypeScript, with hands-on experience in building responsive and
+          visually appealing user interfaces. I am proficient in React JS and
+          Next.js, focusing on component-based architecture, reusable
+          components, server-side rendering, and efficient state management.
+          <br />
+          Additionally, I am familiar with React Native for developing
+          cross-platform mobile applications and have explored GSAP to create
+          smooth and engaging animations. With a continuous learning mindset, I
+          strive to enhance my skills and deliver clean, scalable, and
+          user-friendly web experiences.
         </div>
       </div>
       <div className="t-right">
@@ -68,7 +77,7 @@ const Techstack = () => {
             <img src={Javascript} alt="js" />
           </div>
         </motion.div>
-        
+
         {/* background circle  */}
         <div className="t-backCircle blueCircle"></div>
         <div className="t-backCircle yellowCircle"></div>

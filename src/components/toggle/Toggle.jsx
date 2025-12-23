@@ -24,8 +24,8 @@ const Toggle = () => {
 
     // Animate background
     gsap.to(bodyRef.current, {
-      backgroundColor: darkMode ? "#ffffff" : "#121212",
-      color: darkMode ? "#000000" : "#ffffff",
+      backgroundColor: darkMode ? "#ffffff" : "#000000ff",
+      color: darkMode ? "#000000ff" : "#ffffff",
       duration: 0.5,
       ease: "power2.inOut",
     });

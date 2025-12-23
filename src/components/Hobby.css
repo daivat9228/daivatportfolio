@@ -3,13 +3,13 @@
   width: calc(100% + 4rem);  
   margin-left: -2rem;       
   margin-right: -2rem;       
-  height: 55vh;
+  height: 65vh;
   display: flex;
   flex-direction: column;  
   justify-content: center;
   overflow: hidden;
   margin-top: 5vh;
-  margin-bottom: 50px;
+  margin-bottom: 0;
   gap: 1.5rem;
 }
 

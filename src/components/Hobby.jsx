@@ -1,7 +1,5 @@
-import React, { useEffect, useRef } from 'react';
+import React, {  useRef } from 'react';
 import "./Hobby.css";
-import gsap from 'gsap';
-
 
 const Hobby = () => {
      const sliderRef = useRef(null);

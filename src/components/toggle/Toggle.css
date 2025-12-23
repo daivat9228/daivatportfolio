@@ -6,6 +6,7 @@
     position: relative;
     padding: 2px;
     cursor: pointer;
+    z-index: 999;
 }
 
 .toggle > *{
