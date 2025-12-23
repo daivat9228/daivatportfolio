@@ -108,6 +108,9 @@
 } 
 
 @media screen and (max-width: 480px) {
+  .n-wrapper{
+    height: auto;
+  }
   
   .n-list {
     display: none;
@@ -117,11 +120,11 @@
   }
   .n-left {
     gap: 10rem;
-    justify-content: space-between;
+    justify-content: space;
   }
   .n-name {
     width: 100px;
-    padding: 2rem 1rem;
+    padding: 1rem 1rem;
     /* left: 2.5rem; */
   }
 }
