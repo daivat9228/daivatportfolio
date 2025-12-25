@@ -11,42 +11,26 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Project = React.forwardRef((props, ref) => {
   const imageRef = useRef(null);
-  const elemRef = useRef(null)
   const theme = useContext(ThemeContext);
   const darkMode = theme.state.darkMode;
 
-  // ✅ Track screen width for responsive rendering
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768);
 
-  // Debounced resize handler
-  const handleResize = useCallback(() => {
-    const timeoutId = setTimeout(() => {
-      setIsDesktop(window.innerWidth >= 768);
-    }, 100);
-    return () => clearTimeout(timeoutId);
+  // ✅ Resize
+  useEffect(() => {
+    const onResize = () => setIsDesktop(window.innerWidth >= 768);
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
   }, []);
 
+  // ✅ Theme handling
   useEffect(() => {
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, [handleResize]);
-
-  // Combined theme and desktop effects
-  useEffect(() => {
-    // Update image filter
     if (imageRef.current) {
       imageRef.current.style.filter = darkMode ? "brightness(0.8)" : "none";
     }
 
-    // Update elem background (desktop only)
     if (isDesktop) {
-      if (elemRef.current) {
-        elemRef.current.style.backgroundColor = darkMode ? "#79727d2c" : "none";
-      }
-
-      // Update all elem backgrounds
-      const elems = document.querySelectorAll(".elem");
-      elems.forEach((elem) => {
+      document.querySelectorAll(".elem").forEach((elem) => {
         gsap.to(elem, {
           backgroundColor: darkMode ? "#887c9224" : "white",
           duration: 0.3,
@@ -56,84 +40,82 @@ const Project = React.forwardRef((props, ref) => {
     }
   }, [darkMode, isDesktop]);
 
-  // Memoized event handlers
-  const handleMouseEnter = useCallback((elem, overlay, imgSrc, btnOverlay) => {
-    gsap.to(overlay, { y: 0, duration: 0.5, ease: "power3.inOut" });
-    if (btnOverlay) {
-      gsap.to(btnOverlay, { y: 0, duration: 0.5, ease: "power3.inOut" });
-    }
-    if (imageRef.current) {
-      imageRef.current.src = imgSrc;
-      gsap.to(imageRef.current, {
-        opacity: 1,
-        scale: 1,
-        duration: 0.5,
-        ease: "power3.out",
-      });
-    }
-  }, []);
+ // ✅ Hover animations (disable below or equal to 768px)
+useEffect(() => {
+  const elems = document.querySelectorAll(".elem");
 
-  const handleMouseLeave = useCallback((overlay, btnOverlay) => {
-    gsap.to(overlay, { y: "-100%", duration: 0.5, ease: "power3.inOut" });
-    if (btnOverlay) {
-      gsap.to(btnOverlay, {
-        y: "-100%",
+  // ❌ Disable hover when screen <= 768
+  if (window.innerWidth <= 768) {
+    elems.forEach((elem) => {
+      elem.onmouseenter = null;
+      elem.onmouseleave = null;
+    });
+    return;
+  }
+
+  // ✅ Enable hover only when > 768
+  elems.forEach((elem) => {
+    const overlay = elem.querySelector(".overlay");
+    const btnOverlay = elem.querySelector(".btn-overlay");
+    const imgSrc = elem.getAttribute("data-img");
+
+    const enter = () => {
+      gsap.to(overlay, {
+        y: 0,
         duration: 0.5,
         ease: "power3.inOut",
       });
-    }
-    if (imageRef.current) {
-      gsap.to(imageRef.current, {
-        opacity: 0,
-        scale: 0.95,
-        duration: 0.5,
-        ease: "power3.in",
-      });
-    }
-  }, []);
 
-  const handleClick = useCallback((link) => {
-    if (link) window.open(link, "_blank");
-  }, []);
+      if (btnOverlay) {
+        gsap.to(btnOverlay, { y: 0, duration: 0.5 });
+      }
 
-  // Combined hover and click events (desktop only)
-  useEffect(() => {
-    if (!isDesktop) return;
+      if (imageRef.current) {
+        imageRef.current.src = imgSrc;
+        gsap.to(imageRef.current, {
+          opacity: 1,
+          scale: 1,
+          duration: 0.5,
+          ease: "power3.out",
+        });
+      }
+    };
 
-    const elems = document.querySelectorAll(".elem");
-    const cleanupFunctions = [];
+    const leave = () => {
+      gsap.to(overlay, { y: "-100%", duration: 0.5 });
 
+      if (btnOverlay) {
+        gsap.to(btnOverlay, { y: "-100%", duration: 0.5 });
+      }
+
+      if (imageRef.current) {
+        gsap.to(imageRef.current, {
+          opacity: 0,
+          scale: 0.95,
+          duration: 0.5,
+        });
+      }
+    };
+
+    elem.onmouseenter = enter;
+    elem.onmouseleave = leave;
+  });
+
+  // 🧹 Cleanup when resizing or unmounting
+  return () => {
     elems.forEach((elem) => {
-      const overlay = elem.querySelector(".overlay");
-      const imgSrc = elem.getAttribute("data-img");
-      const btnOverlay = elem.querySelector(".btn-overlay");
-      const link = elem.getAttribute("data-link");
-
-      const mouseEnterHandler = () => handleMouseEnter(elem, overlay, imgSrc, btnOverlay);
-      const mouseLeaveHandler = () => handleMouseLeave(overlay, btnOverlay);
-      const clickHandler = () => handleClick(link);
-
-      elem.addEventListener("mouseenter", mouseEnterHandler);
-      elem.addEventListener("mouseleave", mouseLeaveHandler);
-      elem.addEventListener("click", clickHandler);
-
-      cleanupFunctions.push(() => {
-        elem.removeEventListener("mouseenter", mouseEnterHandler);
-        elem.removeEventListener("mouseleave", mouseLeaveHandler);
-        elem.removeEventListener("click", clickHandler);
-      });
+      elem.onmouseenter = null;
+      elem.onmouseleave = null;
     });
+  };
+}, [isDesktop]); // 🔥 THIS IS THE KEY
 
-    return () => cleanupFunctions.forEach(cleanup => cleanup());
-  }, [isDesktop, handleMouseEnter, handleMouseLeave, handleClick]);
 
-  // Scroll animations (run once)
+
+  // ✅ Scroll animation
   useEffect(() => {
-    const elems = document.querySelectorAll(".elem");
-    const scrollTriggers = [];
-
-    elems.forEach((elem) => {
-      const trigger = gsap.fromTo(
+    document.querySelectorAll(".elem").forEach((elem) => {
+      gsap.fromTo(
         elem,
         { opacity: 0, y: 50 },
         {
@@ -144,18 +126,20 @@ const Project = React.forwardRef((props, ref) => {
           scrollTrigger: {
             trigger: elem,
             start: "top 85%",
-            toggleActions: "play none none reverse",
           },
         }
       );
-      scrollTriggers.push(trigger);
     });
+  }, []);
 
-    return () => {
-      scrollTriggers.forEach(trigger => {
-        if (trigger.scrollTrigger) trigger.scrollTrigger.kill();
-      });
-    };
+  // ✅ Mobile tap feedback (very subtle)
+  const handleTap = useCallback((e) => {
+    gsap.to(e.currentTarget, {
+      scale: 0.98,
+      duration: 0.15,
+      yoyo: true,
+      repeat: 1,
+    });
   }, []);
 
   return (
@@ -166,7 +150,6 @@ const Project = React.forwardRef((props, ref) => {
         </span>
       </div>
 
-      {/* ✅ Preview only on desktop */}
       {isDesktop && (
         <div className="image-preview">
           <img ref={imageRef} alt="Preview" />
@@ -174,64 +157,71 @@ const Project = React.forwardRef((props, ref) => {
       )}
 
       <div className="project-list">
-        <div
+        {/* 1 */}
+        <a
           className="elem"
           data-img={Portfolio_thumbnail}
-          data-link="https://daivat9228.github.io/daivatportfolio/"
+          href="https://daivat9228.github.io/daivatportfolio/"
+          target="_blank"
+          rel="noopener noreferrer"
+          onTouchStart={handleTap}
         >
-          <div className="overlay"></div>
-          <img src={Portfolio_thumbnail} alt="Portfolio_thumbnail" loading="lazy" />
+          <div className="overlay" />
+          <img src={Portfolio_thumbnail} alt="" />
           <h2>1. Portfolio Website</h2>
-          <h5>
-            Portfolio website using React.js with hands-on experience in Context
-            API, useState, mapping methods, GSAP, Framer Motion, and responsive
-            UI using CSS.
-          </h5>
-        </div>
+          <h5> Portfolio website using React.js, Context API, GSAP, Framer Motion, and responsive UI.</h5>
+        </a>
 
-        <div
+        {/* 2 */}
+        <a
           className="elem"
           data-img={Quick_Eats_thumbnail}
-          data-link="https://daivat9228.github.io/Quick-Eats/"
+          href="https://daivat9228.github.io/Quick-Eats/"
+          target="_blank"
+          rel="noopener noreferrer"
+          onTouchStart={handleTap}
         >
-          <div className="overlay"></div>
-          <img src={Quick_Eats_thumbnail} alt="Quick_Eats_thumbnail" loading="lazy" />
-          <h2>2. Quick Eats website</h2>
-          <h5>
-            Food delivery web app using React.js, Tailwind CSS, useState,
-            useEffect, map/filter/forEach methods, Context API for robust state management.
-          </h5>
-        </div>
+          <div className="overlay" />
+          <img src={Quick_Eats_thumbnail} alt="" />
+          <h2>2. Quick Eats Website</h2>
+          <h5> Food delivery web app using React.js, Tailwind CSS, Context API, and hooks.</h5>
+        </a>
 
-        <div
+        {/* 3 */}
+        <a
           className="elem"
           data-img={Food_Delivery_web_thumbnail}
-          data-link="https://essense-next-js-project-sdiy.vercel.app/"
+          href="https://essense-next-js-project-sdiy.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          onTouchStart={handleTap}
         >
-          <div className="overlay"></div>
-          <img src={Food_Delivery_web_thumbnail} alt="Essence_e-commerce_web_thumbnail" loading="lazy" />
-          <h2>3. Essence e-commerce website</h2>
-          <h5>
-            Essence e-commerce web app using NextJS, Tailwind CSS, useState,
-            useEffect, map/filter/forEach methods, Context API, and Redux
-            Toolkit for robust state management.
-          </h5>
-        </div>
+          <div className="overlay" />
+          <img src={Food_Delivery_web_thumbnail} alt="" />
+          <h2>3. Essence E-commerce</h2>
+          <h5>E-commerce web app using Next.js, Tailwind CSS, Context API, and Redux Toolkit.</h5>
+        </a>
 
-        <div className="elem" data-img={Quick_Eats_thumbnail} data-link="https://quick-eats-r-napp.vercel.app/">
-          <div className="overlay"></div>
-          <img src={Quick_Eats_thumbnail} alt="" loading="lazy" />
-          <h2>4. Quick Eats mobile App</h2>
-          <h5>
-            Food delivery mobile app using React native, Tailwind CSS, useState, useEffect, map/filter/forEach methods, Context API, and Redux Toolkit for robust state management.
-          </h5>
-        </div>
+        {/* 4 */}
+        <a
+          className="elem"
+          data-img={Quick_Eats_thumbnail}
+          href="https://quick-eats-r-napp.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          onTouchStart={handleTap}
+        >
+          <div className="overlay" />
+          <img src={Quick_Eats_thumbnail} alt="" />
+          <h2>4. Quick Eats Mobile App</h2>
+          <h5>React Native food delivery app with Redux Toolkit and Tailwind CSS.</h5>
+        </a>
       </div>
 
       <div id="all-projects">
         <div className="button btn-elem">
-          <div className="btn-overlay"></div>
-          <a href='/projects'>All Projects {" →"}</a>
+          <div className="btn-overlay" />
+          <a href="/projects">All Projects →</a>
         </div>
       </div>
     </div>

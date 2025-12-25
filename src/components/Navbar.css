@@ -109,7 +109,7 @@
 
 @media screen and (max-width: 480px) {
   .n-wrapper{
-    height: auto;
+    height: 10vh;
   }
   
   .n-list {

@@ -51,6 +51,15 @@
   align-items: center;
 }
 
+a.elem,
+a.elem:link,
+a.elem:visited,
+a.elem:hover,
+a.elem:active {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
 .elem h2 {
   font-size: clamp(1.2rem, 2vw + 0.5rem, 2rem);
   font-weight: 800;
