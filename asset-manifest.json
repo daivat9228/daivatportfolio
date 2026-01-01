@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/daivatportfolio/static/css/main.8ddef7b1.css",
-    "main.js": "/daivatportfolio/static/js/main.fcf0c5dd.js",
+    "main.css": "/daivatportfolio/static/css/main.0cf59a86.css",
+    "main.js": "/daivatportfolio/static/js/main.b916a198.js",
     "static/css/650.390eb5a0.chunk.css": "/daivatportfolio/static/css/650.390eb5a0.chunk.css",
     "static/js/650.f3198bcf.chunk.js": "/daivatportfolio/static/js/650.f3198bcf.chunk.js",
     "static/css/116.c70bfcf2.chunk.css": "/daivatportfolio/static/css/116.c70bfcf2.chunk.css",
@@ -10,10 +10,10 @@
     "static/js/980.3fff4d4d.chunk.js": "/daivatportfolio/static/js/980.3fff4d4d.chunk.js",
     "static/css/158.0b3528c3.chunk.css": "/daivatportfolio/static/css/158.0b3528c3.chunk.css",
     "static/js/158.eb66c687.chunk.js": "/daivatportfolio/static/js/158.eb66c687.chunk.js",
-    "static/css/409.8af2b16b.chunk.css": "/daivatportfolio/static/css/409.8af2b16b.chunk.css",
+    "static/css/409.cd1ac6b8.chunk.css": "/daivatportfolio/static/css/409.cd1ac6b8.chunk.css",
     "static/js/409.d14ad13c.chunk.js": "/daivatportfolio/static/js/409.d14ad13c.chunk.js",
     "static/css/415.ca9db32f.chunk.css": "/daivatportfolio/static/css/415.ca9db32f.chunk.css",
-    "static/js/415.8941fbae.chunk.js": "/daivatportfolio/static/js/415.8941fbae.chunk.js",
+    "static/js/415.2140c5f9.chunk.js": "/daivatportfolio/static/js/415.2140c5f9.chunk.js",
     "static/js/681.d08fc746.chunk.js": "/daivatportfolio/static/js/681.d08fc746.chunk.js",
     "static/js/124.15c52bb7.chunk.js": "/daivatportfolio/static/js/124.15c52bb7.chunk.js",
     "static/media/css3.png": "/daivatportfolio/static/media/css3.5d1e9b1f4ab7f72ce7bc.png",
@@ -26,10 +26,10 @@
     "static/media/Food_Delivery_web_thumbnail.webp": "/daivatportfolio/static/media/Food_Delivery_web_thumbnail.a249a6ea45b363ef9509.webp",
     "static/media/Portfolio_thumbnail.webp": "/daivatportfolio/static/media/Portfolio_thumbnail.fc48e44c889b211ca2b1.webp",
     "static/media/school.svg": "/daivatportfolio/static/media/school.f919580e0fc8b339396369d8c196870c.svg",
-    "static/media/work.svg": "/daivatportfolio/static/media/work.f4b6d08987ae2b497cea53de7dadf525.svg",
     "index.html": "/daivatportfolio/index.html",
-    "main.8ddef7b1.css.map": "/daivatportfolio/static/css/main.8ddef7b1.css.map",
-    "main.fcf0c5dd.js.map": "/daivatportfolio/static/js/main.fcf0c5dd.js.map",
+    "static/media/work.svg": "/daivatportfolio/static/media/work.f4b6d08987ae2b497cea53de7dadf525.svg",
+    "main.0cf59a86.css.map": "/daivatportfolio/static/css/main.0cf59a86.css.map",
+    "main.b916a198.js.map": "/daivatportfolio/static/js/main.b916a198.js.map",
     "650.390eb5a0.chunk.css.map": "/daivatportfolio/static/css/650.390eb5a0.chunk.css.map",
     "650.f3198bcf.chunk.js.map": "/daivatportfolio/static/js/650.f3198bcf.chunk.js.map",
     "116.c70bfcf2.chunk.css.map": "/daivatportfolio/static/css/116.c70bfcf2.chunk.css.map",
@@ -38,15 +38,15 @@
     "980.3fff4d4d.chunk.js.map": "/daivatportfolio/static/js/980.3fff4d4d.chunk.js.map",
     "158.0b3528c3.chunk.css.map": "/daivatportfolio/static/css/158.0b3528c3.chunk.css.map",
     "158.eb66c687.chunk.js.map": "/daivatportfolio/static/js/158.eb66c687.chunk.js.map",
-    "409.8af2b16b.chunk.css.map": "/daivatportfolio/static/css/409.8af2b16b.chunk.css.map",
+    "409.cd1ac6b8.chunk.css.map": "/daivatportfolio/static/css/409.cd1ac6b8.chunk.css.map",
     "409.d14ad13c.chunk.js.map": "/daivatportfolio/static/js/409.d14ad13c.chunk.js.map",
     "415.ca9db32f.chunk.css.map": "/daivatportfolio/static/css/415.ca9db32f.chunk.css.map",
-    "415.8941fbae.chunk.js.map": "/daivatportfolio/static/js/415.8941fbae.chunk.js.map",
+    "415.2140c5f9.chunk.js.map": "/daivatportfolio/static/js/415.2140c5f9.chunk.js.map",
     "681.d08fc746.chunk.js.map": "/daivatportfolio/static/js/681.d08fc746.chunk.js.map",
     "124.15c52bb7.chunk.js.map": "/daivatportfolio/static/js/124.15c52bb7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8ddef7b1.css",
-    "static/js/main.fcf0c5dd.js"
+    "static/css/main.0cf59a86.css",
+    "static/js/main.b916a198.js"
   ]
 }
