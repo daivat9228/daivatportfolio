@@ -22,7 +22,7 @@ body {
 .App {
   overflow: hidden;
   color: var(--black);
-  background: white;
+  background: #E6DFE4;
   position: relative;
   z-index: 1;
   margin-bottom: 90vh;
@@ -36,12 +36,12 @@ body {
 }
 
 .App.dark-theme {
-  background: #121212;
+  background: #161320;
   color: white;
 }
 
 .App.light-theme {
-  background: white;
+  background: #f5f5f5;
   color: var(--black);
 }
 

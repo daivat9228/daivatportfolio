@@ -108,7 +108,7 @@ useEffect(() => {
       elem.onmouseleave = null;
     });
   };
-}, [isDesktop]); // 🔥 THIS IS THE KEY
+}, [isDesktop]); 
 
 
 

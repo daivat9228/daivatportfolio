@@ -43,7 +43,7 @@
   overflow: hidden;
   position: relative;
   cursor: pointer;
-  border-bottom: 2px solid #ccc;
+  border-bottom: 1px solid #ccc;
   padding: 10px 20px;
   display: flex;
   flex-direction: column;
