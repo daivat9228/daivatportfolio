@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useRef } from "react";
 import "./Toggle.css";
 import Sun from "@iconscout/react-unicons/icons/uil-sun";
 import Moon from "@iconscout/react-unicons/icons/uil-moon";
-import { ThemeContext } from "../../Context";
+import { ThemeContext } from "../../context/ThemeContext";
 import gsap from "gsap";
 
 const Toggle = () => {

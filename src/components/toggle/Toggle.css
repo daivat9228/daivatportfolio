@@ -1,23 +1,22 @@
-.toggle{
-    display: flex;
-    justify-content: space-between;
-    border: 3px solid var(--purple);
-    border-radius: 1rem;
-    position: relative;
-    padding: 2px;
-    cursor: pointer;
-    z-index: 999;
+.toggle {
+  display: flex;
+  justify-content: space-between;
+  border: 3px solid var(--purple);
+  border-radius: 1rem;
+  position: relative;
+  padding: 2px;
+  cursor: pointer;
+  z-index: 999;
 }
 
-.toggle > *{
-    width: 1rem;
-    height: 1rem;
-    color: var(--purple);
+.toggle > * {
+  width: 1rem;
+  height: 1rem;
+  color: var(--purple);
 }
 
-.t-button{
-    border-radius: 100%;
-    background: var(--purple);
-    position: absolute;
+.t-button {
+  border-radius: 100%;
+  background: var(--purple);
+  position: absolute;
 }
-

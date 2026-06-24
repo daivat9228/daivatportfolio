@@ -1,0 +1,83 @@
+/* ═══════════════════════════════════════════════════════════════
+   GLOBAL MAGNETIC CURSOR
+   Only active on fine-pointer (mouse) devices.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Hide native cursor site-wide on desktop */
+@media (pointer: fine) {
+  *,
+  *::before,
+  *::after {
+    cursor: none !important;
+  }
+}
+
+/* ── MOUSE SPOTLIGHT (Global Blur) ────────────────────────── */
+.spotlight {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(124, 58, 237, 0.15) 0%,
+    rgba(79, 70, 229, 0.08) 35%,
+    transparent 70%
+  );
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9998; /* High z-index to ensure it renders over all section backgrounds */
+  will-change: transform;
+  filter: blur(40px);
+}
+
+/* Match the global light theme class from App.js */
+.light-theme .spotlight {
+  background: radial-gradient(
+    circle,
+    rgba(124, 58, 237, 0.08) 0%,
+    transparent 65%
+  );
+}
+
+/* ── Ring (lagging, mix-blend-mode) ───────────────────────── */
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid rgba(192, 132, 252, 0.75);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 999999;
+  /* GSAP drives x/y via translate; keep origin at top-left */
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+  will-change: transform;
+}
+
+/* ── Dot (snapping) ───────────────────────────────────────── */
+.cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  background: #c084fc;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 1000000;
+  transform: translate(-50%, -50%);
+  will-change: transform;
+}
+
+/* ── Hide on touch / coarse pointer ──────────────────────── */
+@media (pointer: coarse), (hover: none) {
+  .cursor-ring,
+  .cursor-dot {
+    display: none;
+  }
+}
