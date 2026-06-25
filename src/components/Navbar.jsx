@@ -8,7 +8,6 @@ import { useGSAP } from "@gsap/react";
 function Navbar() {
   const leftRef = useRef(null);
   const menuItemsRef = useRef([]);
-  const buttonRef = useRef(null);
   const [isNavVisible, setIsNavVisible] = useState(false);
 
   useGSAP(() => {
@@ -19,12 +18,6 @@ function Navbar() {
       ease: "power2.out",
       delay: 0.5,
     });
-
-    gsap.fromTo(
-      buttonRef.current,
-      { x: 100, opacity: 0 },
-      { x: 0, opacity: 1, duration: 1, ease: "power2.out", delay: 2 },
-    );
 
     menuItemsRef.current.forEach((item) => {
       item.addEventListener("mouseenter", () => {
@@ -108,11 +101,6 @@ function Navbar() {
         )}
         <div className="desktop-hamburger" onClick={toggleNavbar}>
           <span>---</span>
-        </div>
-        <div className=" n-button">
-          <button className="button" ref={buttonRef}>
-            CONTACT
-          </button>
         </div>
       </div>
     </div>

@@ -84,7 +84,7 @@ const Contacts = ({ projectRef }) => {
   }, []);
 
   return (
-    <div className="contacts">
+    <div className="contacts" id="Contact">
       <div className="contacts-container" ref={wrapRef}>
         <div className="contacts-left" ref={leftRef} onClick={handleLeftClick}>
           <div className="portfolio-card">

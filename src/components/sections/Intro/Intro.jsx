@@ -9,7 +9,6 @@ import Javascript from "../../../assets/images/javascript-logo.png";
 function Intro() {
   const containerRef = useRef(null);
   const visualRef = useRef(null);
-  const badgeRef = useRef(null);
   const greetingRef = useRef(null);
   const nameRef = useRef(null);
   const roleRef = useRef(null);
@@ -79,7 +78,6 @@ function Intro() {
       );
 
       // Left column staggered entrance
-      tl.from(badgeRef.current, { y: 30, opacity: 0, duration: 0.8 }, 0.4);
       tl.from(greetingRef.current, { y: 25, opacity: 0, duration: 0.8 }, 0.5);
       tl.from(nameRef.current, { y: 35, opacity: 0, duration: 0.8 }, 0.6);
       tl.from(roleRef.current, { y: 30, opacity: 0, duration: 0.8 }, 0.7);
@@ -144,12 +142,6 @@ function Intro() {
       <div className="hero-content-wrapper">
         {/* Left Column */}
         <div className="hero-details">
-          {/* Availability badge */}
-          <div className="hero-badge" ref={badgeRef}>
-            <span className="avail-dot" />
-            <span>Open to Work — Available Now</span>
-          </div>
-
           {/* Headline */}
           <h1 className="hero-title">
             <span className="hero-greeting" ref={greetingRef}>

@@ -675,20 +675,20 @@
 /* ── SCROLL DOWN MOUSE PROMPT ── */
 .dark-scroll {
   position: absolute;
-  bottom: 2.2rem;
+  bottom: 0.2rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 5px;
   z-index: 5;
 }
 
 .mouse-scroll {
-  width: 20px;
-  height: 32px;
-  border: 2px solid var(--text-muted);
+  width: 16px;
+  height: 26px;
+  border: 1.5px solid var(--text-muted);
   border-radius: 20px;
   position: relative;
   display: flex;
@@ -696,12 +696,12 @@
 }
 
 .mouse-wheel {
-  width: 4px;
-  height: 8px;
+  width: 3px;
+  height: 6px;
   background: #a855f7;
   border-radius: 2px;
   position: absolute;
-  top: 6px;
+  top: 4px;
   animation: scroll-wheel 1.5s infinite ease-in-out;
 }
 
@@ -715,7 +715,7 @@
     opacity: 1;
   }
   50% {
-    transform: translateY(6px);
+    transform: translateY(4px);
     opacity: 0.3;
   }
   100% {
@@ -726,7 +726,7 @@
 
 .scroll-label {
   font-family: "Inter", sans-serif;
-  font-size: 0.58rem;
+  font-size: 0.48rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--text-muted);

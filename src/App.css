@@ -25,7 +25,7 @@ body {
   background: #e6dfe4;
   position: relative;
   z-index: 1;
-  margin-bottom: 90vh;
+  margin-bottom: 100vh;
   transition:
     background-color 0.3s ease,
     color 0.3s ease;
@@ -33,7 +33,7 @@ body {
 
 @media screen and (max-width: 480px) {
   .App {
-    margin-bottom: 85vh;
+    margin-bottom: 100vh;
   }
 }
 

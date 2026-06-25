@@ -1,9 +1,9 @@
 .n-wrapper {
-  height: 10vh;
+  height: 65px;
   display: flex;
-  align-content: center;
+  align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   background-color: transparent;
   padding: 0 2rem;
 }
@@ -17,7 +17,7 @@
 .n-name {
   font-size: 1.3rem;
   font-weight: bold;
-  padding: 30px;
+  padding: 0 30px;
 }
 
 .n-right {
@@ -75,8 +75,8 @@
 
 @media screen and (max-width: 1024px) {
   .n-wrapper {
-    flex-direction: row;
-    padding: 1rem;
+    padding: 0 1rem;
+    height: 70px;
   }
 
   .n-left {
@@ -102,7 +102,7 @@
 
 @media screen and (max-width: 480px) {
   .n-wrapper {
-    height: 10vh;
+    height: 60px;
   }
 
   .n-list {
